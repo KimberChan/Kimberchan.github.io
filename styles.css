@@ -1,0 +1,123 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  color:black;
+  font-size: 75pt;
+  /* margin-left: 20%; */
+  line-height: 5pt;
+}
+p{
+  color:black;
+  font: 32pt;
+  /* margin-left: 20%; */
+}
+/* * {
+	transition: all .1s ease;
+} THIS BREAKS MY CODE, NEED ANOTHER WAY...actually maybe not*/
+.page-section {
+    height: 680px;
+    width: 100%;
+    /* margin-left: 5%; */
+    margin-top: 5%;
+    /* padding: 3em; */
+    /* background: #f7f3ce; */
+    color: white;
+
+}
+.navigation {
+  	position: fixed;
+		width: 10%;
+		margin-left: 2%;
+  	background-color:#EDD7F6;
+  	color: white;
+}
+/* a.navigation__link {
+			display: block;
+    	color: black;
+    	text-decoration: none;
+    	padding: 1em;
+			font-weight: 400;
+
+} */
+.navigation__link {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  font-weight: 400;
+}
+
+.navigation__link:hover {
+  background-color: white;
+  color: black;
+}
+
+.navigation__link:active {
+   background-color:blue;
+   color: black;
+ }
+
+/* #p1:target, #p2:target, #p3:target {
+  background:red;
+  color:gray;
+} */
+
+/*
+svg{
+  background-color:#fffef0;
+} */
+div.infobox{
+  position:fixed;
+  bottom:10px;
+  right:10px;
+   background:#eee;
+  height: 200px;
+  width: 150px;
+  padding: 10px;
+  visibility: hidden;
+}
+/* div.nav{
+  position:fixed;
+  width:100%;
+  height:100px;
+  background-color: white;
+  top:0px;
+  margin: 0px;
+  padding: 0px;
+} */
+
+/* path.link {
+  stroke: "blue";
+} */
+
+.node text {
+stroke:#333;
+cursos:pointer;
+}
+
+.node circle{
+stroke:#fff;
+stroke-width:3px;
+fill:#555;
+}
+
+/* #earth{
+  fill:#000;
+}
+.planet {
+    fill: green;
+} */
+
+#wmap{
+background-color: none;
+}
+
+.titlepage{
+  background-color: none;
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 15%;
+  width: 300px;
+}
