@@ -1,13 +1,18 @@
 *{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  color: black;
 }
 
 h1 {
-  color:black;
+  color:Gray;
   font-size: 75pt;
   /* margin-left: 20%; */
   line-height: 5pt;
+  stroke: 1px;
+  font-style: "bold";
+  /* text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000; */
 }
+
 p{
   color:black;
   font: 32pt;
@@ -17,21 +22,42 @@ p{
 	transition: all .1s ease;
 } THIS BREAKS MY CODE, NEED ANOTHER WAY...actually maybe not*/
 .page-section {
-    height: 680px;
+    height: 570px;
     width: 100%;
     /* margin-left: 5%; */
     margin-top: 5%;
     /* padding: 3em; */
     /* background: #f7f3ce; */
     color: white;
-
 }
+.p3 {
+    height: 1050px;
+    width: 100%;
+    /* margin-left: 5%; */
+    /* margin-top: 5%; */
+    /* padding: 3em; */
+    background: #FBF8EC;
+    color: white;
+    margin-bottom: 0;
+}
+
+.p4 {
+    margin-top: 0;
+    height: 1280px;
+    width: 100%;
+    /* margin-left: 5%; */
+    /* padding: 3em; */
+    background: #F1EFEC;
+    color: white;
+}
+
 .navigation {
   	position: fixed;
-		width: 10%;
+		width: 20%;
 		margin-left: 2%;
-  	background-color:#EDD7F6;
-  	color: white;
+  	/* background-color:#EDD7F6; */
+  	color: #EDD7F6;
+    line-height: 2pt;
 }
 /* a.navigation__link {
 			display: block;
@@ -43,19 +69,20 @@ p{
 } */
 .navigation__link {
   display: block;
-  color: white;
+  color: #EDD7F6;
   text-decoration: none;
   padding: 1em;
   font-weight: 400;
+
 }
 
 .navigation__link:hover {
-  background-color: white;
+  background-color:#EDD7F6;
   color: black;
 }
 
-.navigation__link:active {
-   background-color:blue;
+.navigation__link.active {
+   /* background-color:#EDD7F6; */
    color: black;
  }
 
@@ -72,11 +99,36 @@ div.infobox{
   position:fixed;
   bottom:10px;
   right:10px;
-   background:#eee;
-  height: 200px;
-  width: 150px;
+  font-size: 16pt;
+  background:white;
+  height: 100px;
+  width: 320px;
   padding: 10px;
+  color:black;
   visibility: hidden;
+}
+.boxinfo{
+  display: inline-block;
+  /* background-color: red; */
+  width:200px;
+}
+.icon{
+  display: inline-block;
+  width:100px;
+  height:100px;
+  /* visibility: hidden; */
+}
+
+.title{
+  font-size: 16pt;
+  font-style: "bold";
+}
+.author{
+  font-size: 12pt;
+  padding-bottom: 10px;
+}
+.sub{
+  font-size: 12pt;
 }
 /* div.nav{
   position:fixed;
@@ -120,4 +172,158 @@ background-color: none;
   margin-left: 15%;
   margin-top: 15%;
   width: 300px;
+}
+
+
+/* introduction section */
+
+.introtitle{
+  font-style: "bold";
+  color:gray;
+  position: absolute;
+  margin-left: 15%;
+  font-size: 24pt;
+  /* margin-top: 15%; */
+  margin-top: 4%;
+}
+
+.introicon1{
+  width:100px;
+  height: 100px;
+  color:#EDD7F6;
+  background-color: black;
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 12%;
+}
+.introicon2{
+  width:100px;
+  height: 100px;
+  color:#EDD7F6;
+  background-color: black;
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 5%;
+}
+
+.iconnumber1{
+  font-style: "bold";
+  font-size: 16pt;
+  margin-left: 35%;
+  position: absolute;
+  margin-top: 12%;
+}
+.iconnumber2{
+  font-style: "bold";
+  font-size: 16pt;
+  margin-left: 35%;
+  margin-top: 5%;
+  position: absolute;
+}
+.ABC{
+  width:400px;
+  margin-left: 38%;
+  font-style: "regular";
+  /* background-color: red; */
+  padding-top: 12%;
+
+}
+.icondescription2{
+  width:400px;
+  margin-left: 38%;
+  margin-top: 5%;
+  font-style: "regular";
+
+}
+
+/* Link Environments section */
+.topLE{
+  /* background-color: blue; */
+  margin-left: 50%;
+  padding: 15px;
+  position:absolute;
+}
+h3{
+  font-style: "bold";
+  color:gray;
+  /* position: absolute; */
+  font-size: 24pt;
+  /* margin-top: 15%; */
+  /* margin-top: 4%; */
+  display: block;
+
+  margin-bottom: 0;
+}
+
+.LEinfo{
+display: block;
+font-size: 13pt;
+margin-top: 5px;
+margin-bottom: 35px;
+}
+.dot{
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  margin: 0px;
+  margin-bottom: 10px;
+
+
+}
+
+.AR{background-color: #74B471;}
+.GBR{background-color: #36A8B0;}
+.MLV{background-color: #E15026;}
+.ME{background-color: #56769D;}
+.SD{background-color: #FCC842;}
+
+/* .AlabelR{
+  display: inline-block;
+}
+
+.namear{
+  background-color: white;
+} */
+
+dl{
+  position: absolute;
+  margin-top:-132px;
+  line-height:19pt;
+  margin-left:5%;
+  /* padding:5px; */
+}
+
+.networkdata{
+  padding-top: 10px;
+  /* background-color: red; */
+}
+
+/* Data & your Choices */
+
+h4{
+  font-style: "bold";
+  color:gray;
+  /* position: absolute; */
+  font-size: 24pt;
+  /* margin-top: 15%; */
+  /* margin-top: 4%; */
+  display: block;
+  margin-bottom: 0;
+  margin-left: 50%;
+  margin-top: 0;
+  padding-top: 55px;
+}
+
+.DCinfo{
+display: block;
+font-size: 13pt;
+margin-top: 5px;
+margin-bottom: 35px;
+margin-left: 50%;
+width:600px;
+/* padding: 15px; */
+}
+
+#chartjs-legend{
+  position: inline-block;
 }
