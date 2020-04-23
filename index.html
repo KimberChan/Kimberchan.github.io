@@ -2,52 +2,111 @@
 
 <meta charset="utf-8">
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
 <body>
 <!-- <div class="nav"></div> -->
 
-<nav class="navigation" id="mainNav">
-			<a class="navigation__link" id="page1" href="#1">Section 1</a>
-			<a class="navigation__link" id="page3" href="#2">Section 2</a>
-			<a class="navigation__link" id="page3" href="#3">Section 3</a>
-</nav>
+		<nav class="navigation" id="mainNav">
+				<a class="navigation__link" id="page1" href="#1">Linked</a>
+				<a class="navigation__link" id="page2" href="#2"> Introduction</a>
+				<a class="navigation__link" id="page3" href="#3">Link Environments</a>
+				<a class="navigation__link" id="page4" href="#4">Data & Your Choices</a>
+		</nav>
 
-<div class="page-section hero" id="1">
-	<div class="titlepage">
-	<h1 > Linked </h1>
-	<p> You have impact on the different environments across the world and they have impacts on each other. </p>
-</div>
-	<div id="wmap" style="width: 100%;"></div>
-	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<script src="https://d3js.org/queue.v1.min.js"></script>
-	<script src="https://d3js.org/topojson.v0.min.js"></script>
-	<src="https://datamaps.github.io/scripts/datamaps.world.min.js"></script>
-	<script src="wscript.js"></script>
-</div>
+		<div class="page-section hero" id="1">
+				<div class="titlepage">
+				<h1 > Linked </h1>
+				<p> You have impact on the different environments across the world and they have impacts on each other. </p>
+				</div>
+				<div id="wmap" style="width: 100%;"></div>
+				<script src="https://d3js.org/d3.v4.min.js"></script>
+				<script src="https://d3js.org/queue.v1.min.js"></script>
+				<script src="https://d3js.org/topojson.v0.min.js"></script>
+				<src="https://datamaps.github.io/scripts/datamaps.world.min.js"></script>
+				<!-- <script src="wscript.js"></script> -->
+		</div>
 
-<!-- <div id="wmap" style="width: 100%;"></div>
+<div id="wmap" style="width: 100%;"></div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://d3js.org/queue.v1.min.js"></script>
 <script src="https://d3js.org/topojson.v0.min.js"></script>
 <src="https://datamaps.github.io/scripts/datamaps.world.min.js"></script>
-<script src="wscript.js"></script> -->
+<script src="wscript.js"></script>
 
-<div class="page-section" id="2">
-	<h2>Introduction</h2>
-  <div class="twobox"></div>
-  <div class="twobox"></div>
-  <div class="twobox"></div>
-</div>
+		<div class="page-section" id="2">
+				<h2 class="introtitle">
+					There are two sections</h2>
+				<div class="introline"> </div>
 
-<div class="page-section" id="3"></div>
+				<div class="introicon1"> Icon 1 </div>
+				<div class="iconnumber1"> 1. </div>
+				<div class="ABC"> A network demonstrates the connects and relations between the following environments– Earth, Amazon Rainforest, Great Barrier Reef, Mount Everst, Sahara Desert, Mauna Loa </div>
 
-  <div class="infobox" >
-    <h3 class="title">Book Title</h3>
-    <!-- <h4 class="author">Book Author</h4>
-    <p>Published in: <strong class="published">year</strong></p>
-    <p>Word count: <strong class="words">published</strong></p> -->
+				<div class="introicon2"> Icon 2 </div>
+				<div class="iconnumber2"> 2. </div>
+				<div class="icondescription2"> A series of radar graphs that represent the same environments as the network graph and update as you input your responses about your ethics and beliefs about consumption of different resources </div>
+			  <!-- <div class="twobox"></div>
+			  <div class="twobox"></div>
+			  <div class="twobox"></div> -->
+		</div>
+
+		<div class="page-section p3" id="3">
+				<div class="topLE">
+						<h3>Link Environments</h3>
+						<p class="LEinfo">Interact with the network by hovering over certain circles to learn about the environment. You can playfully drag a circle around the page and see the entire system get affected.</p>
+						<div class="dot AR AlabelR"></div>
+						<!-- <div class="AlabelR namear"> Amazon Rainforest</div> -->
+						<div class="dot GBR"></div>
+						<div class="dot MLV"></div>
+						<div class="dot ME"></div>
+						<div class="dot SD"></div>
+						<dl>
+							<dt>Amazon Rainforest</dt>
+							<dt>Great Barrier Reef</dt>
+							<dt>Mauna Loa Volcano</dt>
+							<dt>Mount Everest</dt>
+							<dt>Sahara Desert</dt>
+						</dl>
+			</div>
+	<svg class="networkdata"width="1260" height="1030" ></svg>
+		</div>
+
+
+		<div class="page-section p4" id="4">
+		<div>
+		<h4> Data & Your Choices </h4>
+		<p class="DCinfo"> You can hide and show  environments by clicking on the legends. To learn more about a specific point on the graph, you can hover over the exact spot.</p>
+	</div>
+
+	<div id="myChart">
+  <canvas id="radar-chart" ></canvas>
+  <div id="chartjs-legend" class="noselect"></div>
+  <input type="button" id="addData1" value="Add Data" onclick="updatechart()">
+  <input type="button" id="addData2"
+  value="Choice B" onclick="updatechart()">
+  <input type="button" value="Choice C" onclick="updatechart()">
+  <input type="button" value="Choice D" onclick="updatechart()">
   </div>
 
-<svg width="960" height="900" ></svg>
+		</div>
+
+
+
+
+  <div class="infobox" >
+		<!-- <img class="ARI icon" src="icons/Amazon.png">
+		<img class="GBRI icon" src="icons/Great.png"> -->
+		<div class="boxinfo">
+	    <div class="title">Name</div>
+	    <div class="author">Location</div>
+	    <div class="sub"> Subtitle </div>
+		</div>
+
+		<!-- <div class="sub"> Icon </div> -->
+    <!-- <p>Word count: <strong class="words">published</strong></p>  -->
+  </div>
+
+<!-- <svg width="960" height="900" ></svg> -->
 
 </body>
 
@@ -55,5 +114,7 @@
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="script.js"></script>
+<script src="fscript.js"></script>
+<script src="rscript.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700;900&display=swap" rel="stylesheet">
