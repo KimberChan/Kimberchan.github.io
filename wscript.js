@@ -12,13 +12,13 @@ let width = d3.select("#wmap").node().getBoundingClientRect().width
   const initialScale = projection.scale()
   let path = d3.geoPath().projection(projection)
 
-  let svg = d3.select("#wmap")
+  let svgs = d3.select("#wmap")
   .append("svg")
   .attr("width", width)
   .attr("height", height)
 
 
-  let globe = svg.append("circle")
+  let globe = svgs.append("circle")
   .attr("fill", "#EEE")
   // .attr("stroke", "#000")
   .attr("id", "drop-shadow")
@@ -28,7 +28,7 @@ let width = d3.select("#wmap").node().getBoundingClientRect().width
   .attr("r", initialScale)
 
 
-  svg.call(d3.drag().on('drag', () => {
+  svgs.call(d3.drag().on('drag', () => {
     const rotate = projection.rotate()
     const k = sensitivity / projection.scale()
     projection.rotate([
@@ -36,7 +36,7 @@ let width = d3.select("#wmap").node().getBoundingClientRect().width
       rotate[1] - d3.event.dy * k
     ])
     path = d3.geoPath().projection(projection)
-    svg.selectAll("path").attr("d", path)
+    svgs.selectAll("path").attr("d", path)
   }))
   //   .call(d3.zoom().on('zoom', () => {
   //   if(d3.event.transform.k > 0.3) {
@@ -50,7 +50,7 @@ let width = d3.select("#wmap").node().getBoundingClientRect().width
   //   }
   // }))
 
-  let map = svg.append("g")
+  let map = svgs.append("g")
 
 // var data = d3.map();
 // var colorScale = d3.scaleThreshold()
@@ -86,5 +86,5 @@ let width = d3.select("#wmap").node().getBoundingClientRect().width
       rotate[1]
     ])
     path = d3.geoPath().projection(projection)
-    svg.selectAll("path").attr("d", path)
+    svgs.selectAll("path").attr("d", path)
   },200)
