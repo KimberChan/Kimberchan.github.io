@@ -22,7 +22,7 @@ p{
 	transition: all .1s ease;
 } THIS BREAKS MY CODE, NEED ANOTHER WAY...actually maybe not*/
 .page-section {
-    height: 570px;
+    height: 600px;
     width: 100%;
     /* margin-left: 5%; */
     margin-top: 5%;
@@ -43,7 +43,7 @@ p{
 
 .p4 {
     margin-top: 0;
-    height: 1280px;
+    height: 980px;
     width: 100%;
     /* margin-left: 5%; */
     /* padding: 3em; */
@@ -97,12 +97,12 @@ svg{
 } */
 div.infobox{
   position:fixed;
-  bottom:10px;
+  bottom:20px;
   right:10px;
   font-size: 16pt;
-  background:white;
+  /* background:white; */
   height: 100px;
-  width: 320px;
+  width: 400px;
   padding: 10px;
   color:black;
   visibility: hidden;
@@ -110,15 +110,17 @@ div.infobox{
 .boxinfo{
   display: inline-block;
   /* background-color: red; */
-  width:200px;
+  width:300px;
 }
 .icon{
   display: inline-block;
-  width:100px;
-  height:100px;
+  width:90px;
+  height:90px;
   /* visibility: hidden; */
 }
-
+img:not(.icon){
+  visibility: visible;
+}
 .title{
   font-size: 16pt;
   font-style: "bold";
@@ -186,24 +188,23 @@ background-color: none;
   /* margin-top: 15%; */
   margin-top: 4%;
 }
-
 .introicon1{
-  width:100px;
-  height: 100px;
+  width:120px;
+  height: 120px;
   color:#EDD7F6;
-  background-color: black;
+  /* background-color: black; */
   position: absolute;
   margin-left: 20%;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 .introicon2{
-  width:100px;
-  height: 100px;
-  color:#EDD7F6;
-  background-color: black;
+  width:120px;
+  height: 120px;
+  /* color:#EDD7F6; */
+  /* background-color: black; */
   position: absolute;
   margin-left: 20%;
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 .iconnumber1{
@@ -318,12 +319,74 @@ h4{
 display: block;
 font-size: 13pt;
 margin-top: 5px;
-margin-bottom: 35px;
+margin-bottom: 55px;
 margin-left: 50%;
 width:600px;
 /* padding: 15px; */
 }
 
-#chartjs-legend{
+/* #chartjs-legend{
   position: inline-block;
+} */
+
+.choice{
+  display: block;
+    padding: 7px 20px;
+	border-radius: 25px;
+    text-decoration: none;
+    color: black;
+      margin-bottom: 15px;
+    width:250px;
+    text-align: center;
 }
+.YourQ{
+  position:absolute;
+  background-color: white;
+  opacity: .6;
+  width:275px;
+  right:130px;
+  padding: 20px;
+  margin-top: 70px;
+  border-radius: 5%;
+
+}
+
+.question{
+  margin-bottom: 20px;
+  width: 250px;
+    display: inline-block;
+}
+
+.moreinfo{
+  display: inline-block;
+  float: right;
+  background-color: #EDD7F6;
+  border-radius: 100%;
+  width:20px;
+  height: 20px;
+  text-align: center;
+  fill:white;
+}
+
+.themoreinfo{
+  display: none;
+  position: absolute;
+  background-color: #EDD7F6;
+  border-radius: 5%;
+  right:20px;
+  font-size: 10pt;
+  text-align: left;
+  width:250px;
+  /* margin-top:10px; */
+  /* height:120px; */
+  padding: 12px 12px 12px 12px;
+}
+
+.moreinfo:hover .themoreinfo{
+ display: inline-block;
+}
+
+
+/* .radar-legend{
+  color:red;
+} */

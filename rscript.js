@@ -1,8 +1,12 @@
+Chart.Legend.prototype.afterFit = function() {
+    this.height = this.height + 50;
+};
+
 var statusone = 0;
 var statustwo = 0;
 var statusthree = 0;
 var statusfour = 0;
-var statusall = (statusone == 0 && statustwo == 0);
+var statusall = (statusone == 0 && statustwo == 0 && statusthree ==0);
 
 var defaultLegendClickHandler = Chart.defaults.global.legend.onClick;
 var removeTogether = function (e, legendItem){
@@ -73,13 +77,52 @@ var chart = new Chart(document.getElementById("radar-chart"), {
       labels: ["1999","2000","2001","2002","2003","2004","2005","2006","2007","2008","2009","2010","2011","2012","2013","2014","2015","2016","2017","2018","2019","2020"],
       datasets: [
         {
+          label: "Amazon Rainforest",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0)",
+          borderColor: "#74B471",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "#74B471",
+          pointBorderColor: "#fff",
+          data: [4.81,5.07,5.26,5.61,5.8,5.98,6.19,6.52,6.48,6.73,6.66,6.68,6.68,6.8,6.86,6.93,7.01,7.01,7.09,7.19,7,7.2],
+          pointStyle: 'line',
+          hidden: false,
+          notes: ["x10^5 km2 Deforestation","x10^5 km2 Deforestation","x10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation",]
+        },
+        {
+          label: "AR2",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0)",
+          borderColor: "#74B471",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "#74B471",
+          pointBorderColor: "#fff",
+          data: [36.2,36.0,35.9,35.7,35.4,35.7,35.4,35.2,35.0,34.8,34.5,34.5,34.3,34.3,34.3,34.3,34.3,34.2,34.1,33.9,33.8,33.8],
+          pointStyle: 'line',
+          hidden: false,
+          notes: ["x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover",]
+        },
+        {
+          label: "AR3",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0)",
+          borderColor: "#74B471",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "#74B471",
+          pointBorderColor: "#fff",
+          data: [4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,5.0,5.1,5.2,5.3,5.4,5.5,5.6,5.7,5.8,5.9,6.0,6.1,6.2],
+          pointStyle: 'line',
+          hidden: false,
+          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+        },
+        {
           label: "Great Barrier Reef",
           fill: true,
           backgroundColor: "rgba(179,181,198,0)",
           borderColor: "#36A8B0",
           pointBorderColor: "#fff",
           pointBackgroundColor: "#36A8B0",
-          data: [25.29,23.97,23.86,24.30,25.05,24.80,25.05,24.8,25.45,24.85,24.85,24.7,24.98,25.7,24.5,24.9,25.1,24.9,25.25,26.00,26.61,26.86,26.27,24.43],
+          data: [25.29,23.97,23.86,24.30,25.05,24.80,25.05,24.8,25.45,24.85,24.85,24.7,24.98,25.7,24.5,24.9,25.1,24.9,25.25,26.00,26.86,24.43],
           pointStyle: 'line',
           hidden: false,
           notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
@@ -108,6 +151,45 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           hidden: false,
           notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
         }  ,
+        {
+          label: "Mauna Loa Volcano",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0)",
+          borderColor: "#E15026",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "#E15026",
+          pointBorderColor: "#fff",
+          data: [3.68,3.69,3.71,3.73,3.75,3.77,3.78,3.81,3.83,3.85,3.87,3.88,3.91,3.93,3.95,3.97,3.99,4.02,4.06,4.07,4.11,4.13],
+          pointStyle: 'line',
+          hidden: false,
+          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+        },
+        {
+          label: "MLV2",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0)",
+          borderColor: "#E15026",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "#E15026",
+          pointBorderColor: "#fff",
+          data: [6.7,6.8,7.0,7.4,8.0,7.2,7.5,7.4,6.9,7.4,8.5,7.2,7.6,7.5,7.9,8.3,7.8,7.8,7.8,7.8,7.9,7.9],
+          pointStyle: 'line',
+          hidden: false,
+          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+        },
+        {
+          label: "MVL3",
+          fill: true,
+          backgroundColor: "rgba(255,99,132,0)",
+          borderColor: "#E15026",
+          pointBorderColor: "#fff",
+          pointBackgroundColor: "#E15026",
+          pointBorderColor: "#fff",
+          data: [43,40,37.5,38,44,40,40,41,40.5,39,38,45,41.5,42,41,40.5,40,41,42,38,39.5,38],
+          pointStyle: 'line',
+          hidden: false,
+          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+        },
         {
           label: "Mount Everest",
           fill: true,
@@ -148,51 +230,12 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
         },
         {
-          label: "Mauna Loa Volcano",
-          fill: true,
-          backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#FCC842",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "#FCC842",
-          pointBorderColor: "#fff",
-          data: [3.68,3.69,3.71,3.73,3.75,3.77,3.78,3.81,3.83,3.85,3.87,3.88,3.91,3.93,3.95,3.97,3.99,4.02,4.06,4.07,4.11,4.13],
-          pointStyle: 'line',
-          hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
-        },
-        {
-          label: "MLV2",
-          fill: true,
-          backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#FCC842",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "#FCC842",
-          pointBorderColor: "#fff",
-          data: [6.7,6.8,7.0,7.4,8.0,7.2,7.5,7.4,7.4,6.9,7.4,8.5,7.2,7.6,7.5,7.9,8.3,7.8,7.8,7.8,7.8,7.9,7.9],
-          pointStyle: 'line',
-          hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
-        },
-        {
-          label: "MVL3",
-          fill: true,
-          backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#FCC842",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "#FCC842",
-          pointBorderColor: "#fff",
-          data: [43,40,37.5,38,44,40,40,41,40.5,39,38,45,41.5,42,41,40.5,40,41,42,38,39.5,38],
-          pointStyle: 'line',
-          hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
-        },
-        {
           label: "Sahara Desert",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#E15026",
+          borderColor: "#FCC842",
           pointBorderColor: "#fff",
-          pointBackgroundColor: "#E15026",
+          pointBackgroundColor: "#FCC842",
           pointBorderColor: "#fff",
           data: [6,14,6,24,14,22,18,12,10,10,10,20,20,23,25,27,28,27,27,29,34,37],
           pointStyle: 'line',
@@ -203,9 +246,9 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           label: "SD2",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#E15026",
+          borderColor: "#FCC842",
           pointBorderColor: "#fff",
-          pointBackgroundColor: "#E15026",
+          pointBackgroundColor: "#FCC842",
           pointBorderColor: "#fff",
           data: [1.85,-.6,-.8,-1.8,1.1,-1.5,-.5,-.7,-1.3,.5,.1,1.2,-1.4,1.4,-.3,-.4,1.95,1.1,-.1,-1.2,-1.4,.1],
           pointStyle: 'line',
@@ -216,50 +259,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           label: "SD3",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#E15026",
+          borderColor: "#FCC842",
           pointBorderColor: "#fff",
-          pointBackgroundColor: "#E15026",
+          pointBackgroundColor: "#FCC842",
           pointBorderColor: "#fff",
           data: [7.0,8.2,8.3,7.7,6.7,7.7,6.9,6.6,7.6,7.7,7.4,6.7,7.8,7.1,7.6,7.4,7.3,7.3,7.3,7.3,7.3,7.3],
-          pointStyle: 'line',
-          hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
-        },
-        {
-          label: "Amazon Rainforest",
-          fill: true,
-          backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#74B471",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "#74B471",
-          pointBorderColor: "#fff",
-          data: [4.81,5.07,5.26,5.61,5.8,5.98,6.19,6.52,6.48,6.73,6.66,6.68,6.68,6.8,6.86,6.93,7.01,7.01,7.09,7.19],
-          pointStyle: 'line',
-          hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
-        },
-        {
-          label: "AR2",
-          fill: true,
-          backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#74B471",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "#74B471",
-          pointBorderColor: "#fff",
-          data: [36.2,36.0,35.9,35.7,35.4,35.7,35.4,35.2,35.0,34.8,34.5,34.5,34.3,34.3,34.3,34.3,34.3,34.2,34.1,34,33.9,33.8,33.8],
-          pointStyle: 'line',
-          hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
-        },
-        {
-          label: "AR3",
-          fill: true,
-          backgroundColor: "rgba(255,99,132,0)",
-          borderColor: "#74B471",
-          pointBorderColor: "#fff",
-          pointBackgroundColor: "#74B471",
-          pointBorderColor: "#fff",
-          data: [4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,5.0,5.1,5.2,5.3,5.4,5.5,5.6,5.7,5.8,5.9,6.0,6.1,6.2],
           pointStyle: 'line',
           hidden: false,
           notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
@@ -267,6 +271,10 @@ var chart = new Chart(document.getElementById("radar-chart"), {
       ]
     },
     options: {
+      tooltips: {
+    mode:'datasets',
+
+        },
       title: {
         display: false,
         text: 'Data & Your Choices'
@@ -280,8 +288,14 @@ var chart = new Chart(document.getElementById("radar-chart"), {
          circular: true,
        },
       },
+    layout: {
+      padding: {
+        top:0,
+        right:400,}
+    },
      legend:{
-       // position: 'right',
+       position: 'top',
+       align:'middle',
        onClick: removeTogether,
        labels: {
            usePointStyle: true,
@@ -307,19 +321,51 @@ var chart = new Chart(document.getElementById("radar-chart"), {
 document.getElementById('addData1').addEventListener('click', function() {
 
     if (chart.data.datasets.length > 0) {
-      if (statusone == 0 && statustwo == 0) {chart.data.labels.push('3000');}
+      if (statusone == 0 && statustwo == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
       chart.data.datasets.forEach(function(datasets,index) {
 
         if (statusall == true) {
-          if (index == 4 && statusone == 0) { datasets.data.push(100);}
-          if (index == 3 && statusone == 0) {datasets.data.push(250);}
+          if (index == 0 && statusone == 0) {datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) { datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) { datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.push(8);}
+          if (index == 5 && statusone == 0) { datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) { datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.push(34);}
+          if (index == 9 && statusone == 0) { datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) { datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.push(37);}
+          if (index == 13 && statusone == 0) { datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.push(7.5);}
+
         }
         else{
-        if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(100);}
-      if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(250);}}
+          if (index == 0 && statusone == 0) {datasets.data.pop ();datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) {datasets.data.pop (); datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.pop ();datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.pop (); datasets.data.push(34);}
+          if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(37);}
+          if (index == 13 && statusone == 0) {datasets.data.pop (); datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+        }
+
     });
   statusone = 1;
   statustwo = 0;
+  statusthree = 0;
+  statusfour = 0;
   statusall = false;
     ;
       window.chart.update();
@@ -329,24 +375,164 @@ document.getElementById('addData1').addEventListener('click', function() {
   document.getElementById('addData2').addEventListener('click', function() {
       if (chart.data.datasets.length > 0) {
         // var month = MONTHS[config.data.labels.length % MONTHS.length];
-        if (statustwo == 0 && statusone == 0) {chart.data.labels.push('3000');}
+        if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
         chart.data.datasets.forEach(function(datasets,index) {
 
           if (statusall == true){
-            if (index == 4 && statustwo == 0) {datasets.data.push(40);}
-            if (index == 3 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 0 && statustwo == 0) {datasets.data.push(6.8);}
+            if (index == 1 && statustwo == 0 ) {datasets.data.push(34.5);}
+            if (index == 2 && statustwo == 0) {datasets.data.push(5.8);}
+            if (index == 3 && statustwo == 0 ) {datasets.data.push(25);}
+            if (index == 4 && statustwo == 0) {datasets.data.push(8);}
+            if (index == 5 && statustwo == 0 ) {datasets.data.push(18.5);}
+            if (index == 6 && statustwo == 0) {datasets.data.push(4);}
+            if (index == 7 && statustwo == 0 ) {datasets.data.push(7.5);}
+            if (index == 8 && statustwo == 0) {datasets.data.push(18.2);}
+            if (index == 9 && statustwo == 0 ) {datasets.data.push(8.8);}
+            if (index == 10 && statustwo == 0) {datasets.data.push(9);}
+            if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
+            if (index == 12 && statustwo == 0) {datasets.data.push(0);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
+
           }
           else{
-        if (index == 4 && statustwo == 0) {datasets.data.pop (); datasets.data.push(100);}
-        if (index == 3 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}}
+        if (index == 0 && statustwo == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+        if (index == 1 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34.5);}
+        if (index == 2 && statustwo == 0) {datasets.data.pop (); datasets.data.push(5.8);}
+        if (index == 3 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(25);}
+        if (index == 4 && statustwo == 0) {datasets.data.pop (); datasets.data.push(8);}
+        if (index == 5 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(18.5);}
+        if (index == 6 && statustwo == 0) {datasets.data.pop (); datasets.data.push(4);}
+        if (index == 7 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+        if (index == 8 && statustwo == 0) {datasets.data.pop (); datasets.data.push(18.2);}
+        if (index == 9 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(8.8);}
+        if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
+        if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
+        if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+      }
       });
         statustwo = 1;
         statusone = 0;
+        statusthree = 0;
+        statusfour = 0;
         statusall = false;
       ;
         window.chart.update();
       }
     });
+
+    document.getElementById('addData3').addEventListener('click', function() {
+        if (chart.data.datasets.length > 0) {
+          // var month = MONTHS[config.data.labels.length % MONTHS.length];
+          if (statusfour == 0 && statusthree == 0 && statusone == 0 && statustwo == 0) {chart.data.labels.push('2021');}
+          chart.data.datasets.forEach(function(datasets,index) {
+
+            if (statusall == true){
+              if (index == 0 && statusthree == 0) {datasets.data.push(6.5);}
+              if (index == 1 && statusthree == 0 ) {datasets.data.push(34.7);}
+              if (index == 2 && statusthree == 0) {datasets.data.push(6);}
+              if (index == 3 && statusthree == 0 ) {datasets.data.push(24);}
+              if (index == 4 && statusthree == 0) {datasets.data.push(8);}
+              if (index == 5 && statusthree == 0 ) {datasets.data.push(17.);}
+              if (index == 6 && statusthree == 0) {datasets.data.push(4);}
+              if (index == 7 && statusthree == 0 ) {datasets.data.push(7.5);}
+              if (index == 8 && statusthree == 0) {datasets.data.push(18.0);}
+              if (index == 9 && statusthree == 0 ) {datasets.data.push(9);}
+              if (index == 10 && statusthree == 0) {datasets.data.push(9);}
+              if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
+              if (index == 12 && statusthree == 0) {datasets.data.push(0);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
+
+            }
+            else{
+          if (index == 0 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6.5);}
+          if (index == 1 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.7);}
+          if (index == 2 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6);}
+          if (index == 3 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(24);}
+          if (index == 4 && statusthree == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(17.0);}
+          if (index == 6 && statusthree == 0) {datasets.data.pop (); datasets.data.push(4);}
+          if (index == 7 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+          if (index == 8 && statusthree == 0) {datasets.data.pop (); datasets.data.push(18.0);}
+          if (index == 9 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(9);}
+          if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
+          if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
+          if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+
+        }
+        });
+          statusthree = 1;
+          statusone = 0;
+          statustwo = 0;
+          statusfour = 0;
+          statusall = false;
+        ;
+          window.chart.update();
+        }
+      });
+
+      document.getElementById('addData4').addEventListener('click', function() {
+          if (chart.data.datasets.length > 0) {
+            // var month = MONTHS[config.data.labels.length % MONTHS.length];
+            if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
+            chart.data.datasets.forEach(function(datasets,index) {
+
+              if (statusall == true){
+                if (index == 0 && statusfour == 0) {datasets.data.push(7.4);}
+                if (index == 1 && statusfour == 0) { datasets.data.push(30);}
+                if (index == 2 && statusfour == 0) {datasets.data.push(6.8);}
+                if (index == 3 && statusfour == 0) { datasets.data.push(23);}
+                if (index == 4 && statusfour == 0) {datasets.data.push(8);}
+                if (index == 5 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 6 && statusfour == 0) {datasets.data.push(4.5);}
+                if (index == 7 && statusfour == 0) { datasets.data.push(8.3);}
+                if (index == 8 && statusfour == 0) {datasets.data.push(34);}
+                if (index == 9 && statusfour == 0) { datasets.data.push(19);}
+                if (index == 10 && statusfour == 0) {datasets.data.push(8.8);}
+                if (index == 11 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 12 && statusfour == 0) {datasets.data.push(37);}
+                if (index == 13 && statusfour == 0) { datasets.data.push(-1);}
+                if (index == 14 && statusfour == 0) {datasets.data.push(7.5);}
+
+              }
+              else{
+            if (index == 0 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.4);}
+            if (index == 1 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(30);}
+            if (index == 2 && statusfour == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+            if (index == 3 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(23);}
+            if (index == 4 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8);}
+            if (index == 5 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 6 && statusfour == 0) {datasets.data.pop (); datasets.data.push(4.5);}
+            if (index == 7 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(8.3);}
+            if (index == 8 && statusfour == 0) {datasets.data.pop (); datasets.data.push(34);}
+            if (index == 9 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(19);}
+            if (index == 10 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+            if (index == 11 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 12 && statusfour == 0) {datasets.data.pop (); datasets.data.push(37);}
+            if (index == 13 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(-1);}
+            if (index == 14 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+          }
+          });
+            statusfour = 1;
+            statusone = 0;
+            statustwo = 0;
+            statusthree = 0;
+            statusall = false;
+          ;
+            window.chart.update();
+          }
+        });
 // function removeTogether() {
 //
 //   click=chart.data.datasets[0]
