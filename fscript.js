@@ -42,27 +42,27 @@ const graph = {
   "nodes": [
     // {"id": "earth", "group": 5, "category": category1, "weblink":"https://yahoo.com",},
 
-    {"id": "amazon", "group": 10, "category":category25, "naming":"Amazon Rainforest","location":"Brazil || South America","subtitle":"World's largest rainforest and is famed for its biodiveristy","subicon":".ARI",},
+    {"id": "amazon", "group": 10, "category":category35, "naming":"Amazon Rainforest","location":"Brazil || South America","subtitle":"World's largest rainforest and is famed for its biodiveristy","subicon":".ARI",},
     {"id": "a1", "group": 14.9, "category":category2,"naming":" Deforestation","subtitle":"Deforestation has increased about 50%","location":"Amazon Rainforest || South America","subicon":".ARI",},
     {"id": "a2", "group": 9.3, "category":category2,"naming":"Forest Coverage","subtitle":" Forest Coverage has decreased about 7%","location":"Amazon Rainforest || South America","subicon":".ARI",},
     {"id": "a3", "group": 16.8, "category":category2,"naming":"Tree Fires ","subtitle":"Tree Fires have went up about 68%","location":"Amazon Rainforest || South America","subicon":amazonicon,},
 
-    {"id": "reef", "group": 10, "category":category35, "naming":"Great Barrier Reef", "subtitle":" World's Largest Coral Reef System", "location": "Queensland || Australia",},
+    {"id": "reef", "group": 10, "category":category65, "naming":"Great Barrier Reef", "subtitle":" World's Largest Coral Reef System", "location": "Queensland || Australia",},
     {"id": "r1", "group": 9.7, "category":category3,"naming":"Surface Temp.", "subtitle":"Surface temperature has dropped about 4%", "location": "Great Barrier Reef || Australia",},
     {"id": "r2", "group": 9.9, "category":category3,"naming":"Water pH", "subtitle":"The water's acidity has dropped 1%", "location": "Great Barrier Reef || Australia",},
     {"id": "r3", "group": 6.8, "category":category3,"naming":"Coral Growth", "subtitle":"Coral growth has decreased about 32%", "location": "Great Barrier Reef || Australia",},
 
-    {"id": "everest", "group": 10, "category":category45,"naming":"Mount Everest", "subtitle":"Earth's highest mountain above sea level", "location": " Nepal & China || Asia",},
+    {"id": "everest", "group": 10, "category":category55,"naming":"Mount Everest", "subtitle":"Earth's highest mountain above sea level", "location": " Nepal & China || Asia",},
     {"id": "e1", "group": 10.5, "category":category4,"naming":"Average Temp. ", "subtitle":"The average temperature has increase about .5%", "location": " Mount Everest || Asia",},
     {"id": "e2", "group": 26.9, "category":category4,"naming":"Lake Formations ", "subtitle":"The number of lakes found on the mountain have more than doubled", "location": " Mount Everest || Asia",},
     {"id": "e3", "group": 32.5, "category":category4, "naming":"Death Toll", "subtitle":"The number of deadly incidents have tripled", "location": " Mount Everest || Asia",},
 
-    {"id": "sahara", "group": 10, "category":category55,"naming":"Sahara Desert ", "subtitle":" It is the largest hot desert in the world, and the third largest desert overall after Antarctica and the Arctic", "location": "Multiple Northern Countries in Africa",},
+    {"id": "sahara", "group": 10, "category":category25,"naming":"Sahara Desert ", "subtitle":" It is the largest hot desert in the world, and the third largest desert overall after Antarctica and the Arctic", "location": "Multiple Northern Countries in Africa",},
     {"id": "s1", "group": 28.7, "category":category5,"naming":"Average Temp.", "subtitle":" The average temperature rate of increase has at least tripled", "location": "Sahara Desert || Africa",},
     {"id": "s2", "group": 1, "category":category5,"naming":"Annual Rainfall", "subtitle":" The annual rainfall has decreased 90%", "location": "Sahara Desert || Africa",},
     {"id": "s3", "group": 10.4, "category":category5,"naming":"Expansion", "subtitle":" The expansion and desertification of the Sahara has increased 4%", "location": "Sahara Desert || Africa",},
 
-    {"id": "ice", "group": 10, "category":category65,"naming":"Mauna Loa Volcano", "subtitle":" The largest subaerial volcano in both mass and volume", "location": "Hawaii || North America",},
+    {"id": "ice", "group": 10, "category":category45,"naming":"Mauna Loa Volcano", "subtitle":" The largest subaerial volcano in both mass and volume", "location": "Hawaii || North America",},
     {"id": "c1", "group": 12.2, "category":category6,"naming":"Atmospheric Co2 ", "subtitle":" The CO2 levels have increased 22% around the observatory area", "location": "Mauna Loa Volcano || North America",},
     {"id": "c2", "group": 11.8, "category":category6,"naming":"Average Temp ", "subtitle":" The temperature annual's trend has increased 18% ", "location": "Mauna Loa Volcano || North America",},
     {"id": "c3", "group": 8.8, "category":category6,"naming":"Average Ozone", "subtitle":" The Ozone has gone down 12% around area", "location": "Mauna Loa Volcano || North America",},
