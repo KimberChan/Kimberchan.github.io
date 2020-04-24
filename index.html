@@ -37,12 +37,12 @@
 				<h2 class="introtitle">
 					There are two sections</h2>
 				<div class="introline"> </div>
-
-				<div class="introicon1"> Icon 1 </div>
+<img class ="introicon1" src="icons/networkicon.png" >
+				<!-- <div class="introicon1"> Icon 1 </div> -->
 				<div class="iconnumber1"> 1. </div>
 				<div class="ABC"> A network demonstrates the connects and relations between the following environments– Earth, Amazon Rainforest, Great Barrier Reef, Mount Everst, Sahara Desert, Mauna Loa </div>
-
-				<div class="introicon2"> Icon 2 </div>
+<img class ="introicon2" src="icons/radaricon.png" >
+				<!-- <div class="introicon2"> <img id="Icon01"src="icons/radaricon.png"> </div> -->
 				<div class="iconnumber2"> 2. </div>
 				<div class="icondescription2"> A series of radar graphs that represent the same environments as the network graph and update as you input your responses about your ethics and beliefs about consumption of different resources </div>
 			  <!-- <div class="twobox"></div>
@@ -53,7 +53,7 @@
 		<div class="page-section p3" id="3">
 				<div class="topLE">
 						<h3>Link Environments</h3>
-						<p class="LEinfo">Interact with the network by hovering over certain circles to learn about the environment. You can playfully drag a circle around the page and see the entire system get affected.</p>
+						<p class=" LEinfo"> In each color, there is a lighter circle that provides standard information about a location, while the other darker circles refer to the specific attribute. The size of the lighter circle makes reference to the environments original state, while the darker circles show the increase/decrease that has happened in the past 20 years. </p>
 						<div class="dot AR AlabelR"></div>
 						<!-- <div class="AlabelR namear"> Amazon Rainforest</div> -->
 						<div class="dot GBR"></div>
@@ -75,17 +75,25 @@
 		<div class="page-section p4" id="4">
 		<div>
 		<h4> Data & Your Choices </h4>
-		<p class="DCinfo"> You can hide and show  environments by clicking on the legends. To learn more about a specific point on the graph, you can hover over the exact spot.</p>
+		<p class="DCinfo"> You can hide and show  environments by clicking on the legends. You can hover over the exact point to get specific details.</p>
 	</div>
 
 	<div id="myChart">
-  <canvas id="radar-chart" ></canvas>
+		<div class="YourQ">
+			<div class="question">What is the most environmental-friendly printing option at the office?</div>
+			<div class="moreinfo">  <span>?
+				<div class="themoreinfo"> Learn about how your actions and ethics effect the environment by answer a question and seeing your impact </div>
+			</div>
+			<input type="button" class="choice" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
+			<input type="button" class="choice" id="addData2"
+			value="100% Recycled Paper" onclick="updatechart()">
+			<input type="button" class="choice" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
+			<input type="button" class="choice" id="addData4"value="TCF Paper" onclick="updatechart()">
+		</div>
+
+  <canvas class="radarg" id="radar-chart" ></canvas>
   <div id="chartjs-legend" class="noselect"></div>
-  <input type="button" id="addData1" value="Add Data" onclick="updatechart()">
-  <input type="button" id="addData2"
-  value="Choice B" onclick="updatechart()">
-  <input type="button" value="Choice C" onclick="updatechart()">
-  <input type="button" value="Choice D" onclick="updatechart()">
+
   </div>
 
 		</div>
@@ -94,6 +102,7 @@
 
 
   <div class="infobox" >
+		<img class="icon" src="icons/Earth.png">
 		<!-- <img class="ARI icon" src="icons/Amazon.png">
 		<img class="GBRI icon" src="icons/Great.png"> -->
 		<div class="boxinfo">
