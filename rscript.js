@@ -1,3 +1,89 @@
+$(function () {
+    var used_numbers = new Array();
+    showQ();
+    showA();
+    /* var todo = setInterval(showQuotes, 10000); */
+
+    function showQ() {
+        used_numbers.splice(0, used_numbers.length);
+        $('.ran').hide();
+        $('.question').hide();
+        for (var inc = 0; inc < 1; inc++) {
+            var random = get_random_number();
+            $('.ran:eq(' + random + ')').show();
+            $('.question:eq(' + random + ')').show();
+        }
+        /* $('.quotes').delay(6000).fadeOut(3000); */
+    }
+    // function showA() {
+    //     used_numbers.splice(0, used_numbers.length);
+    //     $('.ran').hide();
+    //     for (var inc = 0; inc < 1; inc++) {
+    //         var random = get_random_number();
+    //         $('.ran:eq(' + random + ')').show();
+    //     }
+    //     /* $('.quotes').delay(6000).fadeOut(3000); */
+    // }
+
+    function get_random_number() {
+        var number = randomFromTo(0, 4);
+        if ($.inArray(number, used_numbers) != -1) {
+            return get_random_number();
+        } else {
+            used_numbers.push(number);
+            return number;
+        }
+    }
+    function randomFromTo(from, to) {
+        return Math.floor(Math.random() * (to - from + 1) + from);
+    }
+
+
+
+    // function get_random_number() {
+    //     var number = randomFromTo(0, 4);
+    //     if ($.inArray(number, used_numbers) != -1) {
+    //         return get_random_number();
+    //     } else {
+    //         used_numbers.push(number);
+    //         return number;
+    //     }
+    // }
+    // function randomFromTo(from, to) {
+    //     return Math.floor(Math.random() * (to - from + 1) + from);
+    // }
+});
+
+// $(function () {
+//     var used_numbers = new Array();
+//     showQ();
+//     /* var todo = setInterval(showQuotes, 10000); */
+//
+//     function showQ() {
+//         used_numbers.splice(0, used_numbers.length);
+//         $('.ran').hide();
+//         for (var inc = 0; inc < 1; inc++) {
+//             var random = get_random_number();
+//             $('.ran:eq(' + random + ')').show();
+//         }
+//         /* $('.quotes').delay(6000).fadeOut(3000); */
+//     }
+//
+//     function get_random_number() {
+//         var number = randomFromTo(0, 20);
+//         if ($.inArray(number, used_numbers) != -1) {
+//             return get_random_number();
+//         } else {
+//             used_numbers.push(number);
+//             return number;
+//         }
+//     }
+//     function randomFromTo(from, to) {
+//         return Math.floor(Math.random() * (to - from + 1) + from);
+//     }
+// });
+
+
 Chart.Legend.prototype.afterFit = function() {
     this.height = this.height + 50;
 };
@@ -78,6 +164,8 @@ var chart = new Chart(document.getElementById("radar-chart"), {
       datasets: [
         {
           label: "Amazon Rainforest",
+          name: "Deforestation",
+          place: "Amazon Rainforest",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#74B471",
@@ -91,6 +179,8 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "AR2",
+          name: "Forest Coverage",
+          place: "Amazon Rainforest",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#74B471",
@@ -100,10 +190,12 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [36.2,36.0,35.9,35.7,35.4,35.7,35.4,35.2,35.0,34.8,34.5,34.5,34.3,34.3,34.3,34.3,34.3,34.2,34.1,33.9,33.8,33.8],
           pointStyle: 'line',
           hidden: false,
-          notes: ["x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover",]
+          notes: ["(10^6 sq.km)","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover",]
         },
         {
           label: "AR3",
+          name: "Forest Fires",
+          place: "Amazon Rainforest",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#74B471",
@@ -117,6 +209,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "Great Barrier Reef",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(179,181,198,0)",
           borderColor: "#36A8B0",
@@ -129,6 +222,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "Acidity Change of GBR",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(179,181,198,0)",
           borderColor: "#36A8B0",
@@ -141,6 +235,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "Coral Growth of GBR",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(179,181,198,0)",
           borderColor: "#36A8B0",
@@ -153,6 +248,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         }  ,
         {
           label: "Mauna Loa Volcano",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#E15026",
@@ -166,6 +262,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "MLV2",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#E15026",
@@ -179,6 +276,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "MVL3",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#E15026",
@@ -192,6 +290,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "Mount Everest",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#56769D",
@@ -205,6 +304,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "ME2",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#56769D",
@@ -218,6 +318,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "ME3",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#56769D",
@@ -231,6 +332,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "Sahara Desert",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#FCC842",
@@ -244,6 +346,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "SD2",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#FCC842",
@@ -257,6 +360,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         },
         {
           label: "SD3",
+          name: "NAME",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#FCC842",
@@ -272,9 +376,34 @@ var chart = new Chart(document.getElementById("radar-chart"), {
     },
     options: {
       tooltips: {
-    mode:'datasets',
+        custom: function(tooltip) {
+		        if (!tooltip) return;
+		        // disable displaying the color box;
+		        tooltip.displayColors = false;
+		      },
+        enable:true,
+        // mode:'datasets',
+        //Newtitle+years
+        //Datapoint+Notes
+        callbacks:{
+          title: function(tooltipItem, data){
+         var titlename = chart.data.datasets[tooltipItem[0].index].name;
+         var titleyear = chart.data.labels[tooltipItem[0].index];
+         return titlename + " || " + titleyear ;},
+         // footer: function (tooltipItem, data){
+         //   var place =chart.data.datasets[tooltipItem[0].index].place;
+         //   var titleyear = chart.data.labels[tooltipItem[0].index];
+         //   return place + " || " + titleyear ;},
 
-        },
+         label: function(tooltipItem, data){
+        var labelnumber = chart.data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+        var labelnotes = chart.data.datasets[tooltipItem.datasetIndex].notes[tooltipItem.index];
+        return  labelnumber+ " " + labelnotes ;},
+          // label: function(tooltipItems) {
+          //       return data.datasets[tooltipItems.datasetIndex].data + data.datasets[tooltipItems.datasetIndex].notes;
+          //     },
+        }
+      },
       title: {
         display: false,
         text: 'Data & Your Choices'
@@ -318,6 +447,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
 //
 // whenbuttonischeck
 
+//DATA 1
 document.getElementById('addData1').addEventListener('click', function() {
 
     if (chart.data.datasets.length > 0) {
@@ -482,6 +612,871 @@ document.getElementById('addData1').addEventListener('click', function() {
       });
 
       document.getElementById('addData4').addEventListener('click', function() {
+          if (chart.data.datasets.length > 0) {
+            // var month = MONTHS[config.data.labels.length % MONTHS.length];
+            if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
+            chart.data.datasets.forEach(function(datasets,index) {
+
+              if (statusall == true){
+                if (index == 0 && statusfour == 0) {datasets.data.push(7.4);}
+                if (index == 1 && statusfour == 0) { datasets.data.push(30);}
+                if (index == 2 && statusfour == 0) {datasets.data.push(6.8);}
+                if (index == 3 && statusfour == 0) { datasets.data.push(23);}
+                if (index == 4 && statusfour == 0) {datasets.data.push(8);}
+                if (index == 5 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 6 && statusfour == 0) {datasets.data.push(4.5);}
+                if (index == 7 && statusfour == 0) { datasets.data.push(8.3);}
+                if (index == 8 && statusfour == 0) {datasets.data.push(34);}
+                if (index == 9 && statusfour == 0) { datasets.data.push(19);}
+                if (index == 10 && statusfour == 0) {datasets.data.push(8.8);}
+                if (index == 11 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 12 && statusfour == 0) {datasets.data.push(37);}
+                if (index == 13 && statusfour == 0) { datasets.data.push(-1);}
+                if (index == 14 && statusfour == 0) {datasets.data.push(7.5);}
+
+              }
+              else{
+            if (index == 0 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.4);}
+            if (index == 1 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(30);}
+            if (index == 2 && statusfour == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+            if (index == 3 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(23);}
+            if (index == 4 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8);}
+            if (index == 5 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 6 && statusfour == 0) {datasets.data.pop (); datasets.data.push(4.5);}
+            if (index == 7 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(8.3);}
+            if (index == 8 && statusfour == 0) {datasets.data.pop (); datasets.data.push(34);}
+            if (index == 9 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(19);}
+            if (index == 10 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+            if (index == 11 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 12 && statusfour == 0) {datasets.data.pop (); datasets.data.push(37);}
+            if (index == 13 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(-1);}
+            if (index == 14 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+          }
+          });
+            statusfour = 1;
+            statusone = 0;
+            statustwo = 0;
+            statusthree = 0;
+            statusall = false;
+          ;
+            window.chart.update();
+          }
+        });
+//DATA@
+document.getElementById('addDatb1').addEventListener('click', function() {
+
+    if (chart.data.datasets.length > 0) {
+      if (statusone == 0 && statustwo == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+      chart.data.datasets.forEach(function(datasets,index) {
+
+        if (statusall == true) {
+          if (index == 0 && statusone == 0) {datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) { datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) { datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.push(8);}
+          if (index == 5 && statusone == 0) { datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) { datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.push(34);}
+          if (index == 9 && statusone == 0) { datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) { datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.push(37);}
+          if (index == 13 && statusone == 0) { datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.push(7.5);}
+
+        }
+        else{
+          if (index == 0 && statusone == 0) {datasets.data.pop ();datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) {datasets.data.pop (); datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.pop ();datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.pop (); datasets.data.push(34);}
+          if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(37);}
+          if (index == 13 && statusone == 0) {datasets.data.pop (); datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+        }
+
+    });
+  statusone = 1;
+  statustwo = 0;
+  statusthree = 0;
+  statusfour = 0;
+  statusall = false;
+    ;
+      window.chart.update();
+    }
+  });
+
+  document.getElementById('addDatb2').addEventListener('click', function() {
+      if (chart.data.datasets.length > 0) {
+        // var month = MONTHS[config.data.labels.length % MONTHS.length];
+        if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+        chart.data.datasets.forEach(function(datasets,index) {
+
+          if (statusall == true){
+            if (index == 0 && statustwo == 0) {datasets.data.push(6.8);}
+            if (index == 1 && statustwo == 0 ) {datasets.data.push(34.5);}
+            if (index == 2 && statustwo == 0) {datasets.data.push(5.8);}
+            if (index == 3 && statustwo == 0 ) {datasets.data.push(25);}
+            if (index == 4 && statustwo == 0) {datasets.data.push(8);}
+            if (index == 5 && statustwo == 0 ) {datasets.data.push(18.5);}
+            if (index == 6 && statustwo == 0) {datasets.data.push(4);}
+            if (index == 7 && statustwo == 0 ) {datasets.data.push(7.5);}
+            if (index == 8 && statustwo == 0) {datasets.data.push(18.2);}
+            if (index == 9 && statustwo == 0 ) {datasets.data.push(8.8);}
+            if (index == 10 && statustwo == 0) {datasets.data.push(9);}
+            if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
+            if (index == 12 && statustwo == 0) {datasets.data.push(0);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
+
+          }
+          else{
+        if (index == 0 && statustwo == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+        if (index == 1 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34.5);}
+        if (index == 2 && statustwo == 0) {datasets.data.pop (); datasets.data.push(5.8);}
+        if (index == 3 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(25);}
+        if (index == 4 && statustwo == 0) {datasets.data.pop (); datasets.data.push(8);}
+        if (index == 5 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(18.5);}
+        if (index == 6 && statustwo == 0) {datasets.data.pop (); datasets.data.push(4);}
+        if (index == 7 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+        if (index == 8 && statustwo == 0) {datasets.data.pop (); datasets.data.push(18.2);}
+        if (index == 9 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(8.8);}
+        if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
+        if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
+        if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+      }
+      });
+        statustwo = 1;
+        statusone = 0;
+        statusthree = 0;
+        statusfour = 0;
+        statusall = false;
+      ;
+        window.chart.update();
+      }
+    });
+
+    document.getElementById('addDatb3').addEventListener('click', function() {
+        if (chart.data.datasets.length > 0) {
+          // var month = MONTHS[config.data.labels.length % MONTHS.length];
+          if (statusfour == 0 && statusthree == 0 && statusone == 0 && statustwo == 0) {chart.data.labels.push('2021');}
+          chart.data.datasets.forEach(function(datasets,index) {
+
+            if (statusall == true){
+              if (index == 0 && statusthree == 0) {datasets.data.push(6.5);}
+              if (index == 1 && statusthree == 0 ) {datasets.data.push(34.7);}
+              if (index == 2 && statusthree == 0) {datasets.data.push(6);}
+              if (index == 3 && statusthree == 0 ) {datasets.data.push(24);}
+              if (index == 4 && statusthree == 0) {datasets.data.push(8);}
+              if (index == 5 && statusthree == 0 ) {datasets.data.push(17.);}
+              if (index == 6 && statusthree == 0) {datasets.data.push(4);}
+              if (index == 7 && statusthree == 0 ) {datasets.data.push(7.5);}
+              if (index == 8 && statusthree == 0) {datasets.data.push(18.0);}
+              if (index == 9 && statusthree == 0 ) {datasets.data.push(9);}
+              if (index == 10 && statusthree == 0) {datasets.data.push(9);}
+              if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
+              if (index == 12 && statusthree == 0) {datasets.data.push(0);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
+
+            }
+            else{
+          if (index == 0 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6.5);}
+          if (index == 1 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.7);}
+          if (index == 2 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6);}
+          if (index == 3 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(24);}
+          if (index == 4 && statusthree == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(17.0);}
+          if (index == 6 && statusthree == 0) {datasets.data.pop (); datasets.data.push(4);}
+          if (index == 7 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+          if (index == 8 && statusthree == 0) {datasets.data.pop (); datasets.data.push(18.0);}
+          if (index == 9 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(9);}
+          if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
+          if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
+          if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+
+        }
+        });
+          statusthree = 1;
+          statusone = 0;
+          statustwo = 0;
+          statusfour = 0;
+          statusall = false;
+        ;
+          window.chart.update();
+        }
+      });
+
+      document.getElementById('addDatb4').addEventListener('click', function() {
+          if (chart.data.datasets.length > 0) {
+            // var month = MONTHS[config.data.labels.length % MONTHS.length];
+            if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
+            chart.data.datasets.forEach(function(datasets,index) {
+
+              if (statusall == true){
+                if (index == 0 && statusfour == 0) {datasets.data.push(7.4);}
+                if (index == 1 && statusfour == 0) { datasets.data.push(30);}
+                if (index == 2 && statusfour == 0) {datasets.data.push(6.8);}
+                if (index == 3 && statusfour == 0) { datasets.data.push(23);}
+                if (index == 4 && statusfour == 0) {datasets.data.push(8);}
+                if (index == 5 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 6 && statusfour == 0) {datasets.data.push(4.5);}
+                if (index == 7 && statusfour == 0) { datasets.data.push(8.3);}
+                if (index == 8 && statusfour == 0) {datasets.data.push(34);}
+                if (index == 9 && statusfour == 0) { datasets.data.push(19);}
+                if (index == 10 && statusfour == 0) {datasets.data.push(8.8);}
+                if (index == 11 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 12 && statusfour == 0) {datasets.data.push(37);}
+                if (index == 13 && statusfour == 0) { datasets.data.push(-1);}
+                if (index == 14 && statusfour == 0) {datasets.data.push(7.5);}
+
+              }
+              else{
+            if (index == 0 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.4);}
+            if (index == 1 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(30);}
+            if (index == 2 && statusfour == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+            if (index == 3 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(23);}
+            if (index == 4 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8);}
+            if (index == 5 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 6 && statusfour == 0) {datasets.data.pop (); datasets.data.push(4.5);}
+            if (index == 7 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(8.3);}
+            if (index == 8 && statusfour == 0) {datasets.data.pop (); datasets.data.push(34);}
+            if (index == 9 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(19);}
+            if (index == 10 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+            if (index == 11 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 12 && statusfour == 0) {datasets.data.pop (); datasets.data.push(37);}
+            if (index == 13 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(-1);}
+            if (index == 14 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+          }
+          });
+            statusfour = 1;
+            statusone = 0;
+            statustwo = 0;
+            statusthree = 0;
+            statusall = false;
+          ;
+            window.chart.update();
+          }
+        });
+//DATA3
+        document.getElementById('addDatc1').addEventListener('click', function() {
+
+            if (chart.data.datasets.length > 0) {
+              if (statusone == 0 && statustwo == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+              chart.data.datasets.forEach(function(datasets,index) {
+
+                if (statusall == true) {
+                  if (index == 0 && statusone == 0) {datasets.data.push(7.4);}
+                  if (index == 1 && statusone == 0) { datasets.data.push(30);}
+                  if (index == 2 && statusone == 0) {datasets.data.push(6.8);}
+                  if (index == 3 && statusone == 0) { datasets.data.push(23);}
+                  if (index == 4 && statusone == 0) {datasets.data.push(8);}
+                  if (index == 5 && statusone == 0) { datasets.data.push(12);}
+                  if (index == 6 && statusone == 0) {datasets.data.push(4.5);}
+                  if (index == 7 && statusone == 0) { datasets.data.push(8.3);}
+                  if (index == 8 && statusone == 0) {datasets.data.push(34);}
+                  if (index == 9 && statusone == 0) { datasets.data.push(19);}
+                  if (index == 10 && statusone == 0) {datasets.data.push(8.8);}
+                  if (index == 11 && statusone == 0) { datasets.data.push(12);}
+                  if (index == 12 && statusone == 0) {datasets.data.push(37);}
+                  if (index == 13 && statusone == 0) { datasets.data.push(-1);}
+                  if (index == 14 && statusone == 0) {datasets.data.push(7.5);}
+
+                }
+                else{
+                  if (index == 0 && statusone == 0) {datasets.data.pop ();datasets.data.push(7.4);}
+                  if (index == 1 && statusone == 0) {datasets.data.pop (); datasets.data.push(30);}
+                  if (index == 2 && statusone == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+                  if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(23);}
+                  if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
+                  if (index == 5 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+                  if (index == 6 && statusone == 0) {datasets.data.pop ();datasets.data.push(4.5);}
+                  if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.3);}
+                  if (index == 8 && statusone == 0) {datasets.data.pop (); datasets.data.push(34);}
+                  if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19);}
+                  if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+                  if (index == 11 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+                  if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(37);}
+                  if (index == 13 && statusone == 0) {datasets.data.pop (); datasets.data.push(-1);}
+                  if (index == 14 && statusone == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+                }
+
+            });
+          statusone = 1;
+          statustwo = 0;
+          statusthree = 0;
+          statusfour = 0;
+          statusall = false;
+            ;
+              window.chart.update();
+            }
+          });
+
+          document.getElementById('addDatc2').addEventListener('click', function() {
+              if (chart.data.datasets.length > 0) {
+                // var month = MONTHS[config.data.labels.length % MONTHS.length];
+                if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+                chart.data.datasets.forEach(function(datasets,index) {
+
+                  if (statusall == true){
+                    if (index == 0 && statustwo == 0) {datasets.data.push(6.8);}
+                    if (index == 1 && statustwo == 0 ) {datasets.data.push(34.5);}
+                    if (index == 2 && statustwo == 0) {datasets.data.push(5.8);}
+                    if (index == 3 && statustwo == 0 ) {datasets.data.push(25);}
+                    if (index == 4 && statustwo == 0) {datasets.data.push(8);}
+                    if (index == 5 && statustwo == 0 ) {datasets.data.push(18.5);}
+                    if (index == 6 && statustwo == 0) {datasets.data.push(4);}
+                    if (index == 7 && statustwo == 0 ) {datasets.data.push(7.5);}
+                    if (index == 8 && statustwo == 0) {datasets.data.push(18.2);}
+                    if (index == 9 && statustwo == 0 ) {datasets.data.push(8.8);}
+                    if (index == 10 && statustwo == 0) {datasets.data.push(9);}
+                    if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
+                    if (index == 12 && statustwo == 0) {datasets.data.push(0);}
+                    if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+                    if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
+
+                  }
+                  else{
+                if (index == 0 && statustwo == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+                if (index == 1 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34.5);}
+                if (index == 2 && statustwo == 0) {datasets.data.pop (); datasets.data.push(5.8);}
+                if (index == 3 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(25);}
+                if (index == 4 && statustwo == 0) {datasets.data.pop (); datasets.data.push(8);}
+                if (index == 5 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(18.5);}
+                if (index == 6 && statustwo == 0) {datasets.data.pop (); datasets.data.push(4);}
+                if (index == 7 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+                if (index == 8 && statustwo == 0) {datasets.data.pop (); datasets.data.push(18.2);}
+                if (index == 9 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(8.8);}
+                if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
+                if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
+                if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
+                if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+                if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+              }
+              });
+                statustwo = 1;
+                statusone = 0;
+                statusthree = 0;
+                statusfour = 0;
+                statusall = false;
+              ;
+                window.chart.update();
+              }
+            });
+
+            document.getElementById('addDatc3').addEventListener('click', function() {
+                if (chart.data.datasets.length > 0) {
+                  // var month = MONTHS[config.data.labels.length % MONTHS.length];
+                  if (statusfour == 0 && statusthree == 0 && statusone == 0 && statustwo == 0) {chart.data.labels.push('2021');}
+                  chart.data.datasets.forEach(function(datasets,index) {
+
+                    if (statusall == true){
+                      if (index == 0 && statusthree == 0) {datasets.data.push(6.5);}
+                      if (index == 1 && statusthree == 0 ) {datasets.data.push(34.7);}
+                      if (index == 2 && statusthree == 0) {datasets.data.push(6);}
+                      if (index == 3 && statusthree == 0 ) {datasets.data.push(24);}
+                      if (index == 4 && statusthree == 0) {datasets.data.push(8);}
+                      if (index == 5 && statusthree == 0 ) {datasets.data.push(17.);}
+                      if (index == 6 && statusthree == 0) {datasets.data.push(4);}
+                      if (index == 7 && statusthree == 0 ) {datasets.data.push(7.5);}
+                      if (index == 8 && statusthree == 0) {datasets.data.push(18.0);}
+                      if (index == 9 && statusthree == 0 ) {datasets.data.push(9);}
+                      if (index == 10 && statusthree == 0) {datasets.data.push(9);}
+                      if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
+                      if (index == 12 && statusthree == 0) {datasets.data.push(0);}
+                      if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+                      if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
+
+                    }
+                    else{
+                  if (index == 0 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6.5);}
+                  if (index == 1 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.7);}
+                  if (index == 2 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6);}
+                  if (index == 3 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(24);}
+                  if (index == 4 && statusthree == 0) {datasets.data.pop (); datasets.data.push(8);}
+                  if (index == 5 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(17.0);}
+                  if (index == 6 && statusthree == 0) {datasets.data.pop (); datasets.data.push(4);}
+                  if (index == 7 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+                  if (index == 8 && statusthree == 0) {datasets.data.pop (); datasets.data.push(18.0);}
+                  if (index == 9 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(9);}
+                  if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
+                  if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
+                  if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
+                  if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+                  if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+
+                }
+                });
+                  statusthree = 1;
+                  statusone = 0;
+                  statustwo = 0;
+                  statusfour = 0;
+                  statusall = false;
+                ;
+                  window.chart.update();
+                }
+              });
+
+              document.getElementById('addDatc4').addEventListener('click', function() {
+                  if (chart.data.datasets.length > 0) {
+                    // var month = MONTHS[config.data.labels.length % MONTHS.length];
+                    if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
+                    chart.data.datasets.forEach(function(datasets,index) {
+
+                      if (statusall == true){
+                        if (index == 0 && statusfour == 0) {datasets.data.push(7.4);}
+                        if (index == 1 && statusfour == 0) { datasets.data.push(30);}
+                        if (index == 2 && statusfour == 0) {datasets.data.push(6.8);}
+                        if (index == 3 && statusfour == 0) { datasets.data.push(23);}
+                        if (index == 4 && statusfour == 0) {datasets.data.push(8);}
+                        if (index == 5 && statusfour == 0) { datasets.data.push(12);}
+                        if (index == 6 && statusfour == 0) {datasets.data.push(4.5);}
+                        if (index == 7 && statusfour == 0) { datasets.data.push(8.3);}
+                        if (index == 8 && statusfour == 0) {datasets.data.push(34);}
+                        if (index == 9 && statusfour == 0) { datasets.data.push(19);}
+                        if (index == 10 && statusfour == 0) {datasets.data.push(8.8);}
+                        if (index == 11 && statusfour == 0) { datasets.data.push(12);}
+                        if (index == 12 && statusfour == 0) {datasets.data.push(37);}
+                        if (index == 13 && statusfour == 0) { datasets.data.push(-1);}
+                        if (index == 14 && statusfour == 0) {datasets.data.push(7.5);}
+
+                      }
+                      else{
+                    if (index == 0 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.4);}
+                    if (index == 1 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(30);}
+                    if (index == 2 && statusfour == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+                    if (index == 3 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(23);}
+                    if (index == 4 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8);}
+                    if (index == 5 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+                    if (index == 6 && statusfour == 0) {datasets.data.pop (); datasets.data.push(4.5);}
+                    if (index == 7 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(8.3);}
+                    if (index == 8 && statusfour == 0) {datasets.data.pop (); datasets.data.push(34);}
+                    if (index == 9 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(19);}
+                    if (index == 10 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+                    if (index == 11 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+                    if (index == 12 && statusfour == 0) {datasets.data.pop (); datasets.data.push(37);}
+                    if (index == 13 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(-1);}
+                    if (index == 14 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+                  }
+                  });
+                    statusfour = 1;
+                    statusone = 0;
+                    statustwo = 0;
+                    statusthree = 0;
+                    statusall = false;
+                  ;
+                    window.chart.update();
+                  }
+                });
+
+//DATA4
+document.getElementById('addDatd1').addEventListener('click', function() {
+
+    if (chart.data.datasets.length > 0) {
+      if (statusone == 0 && statustwo == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+      chart.data.datasets.forEach(function(datasets,index) {
+
+        if (statusall == true) {
+          if (index == 0 && statusone == 0) {datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) { datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) { datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.push(8);}
+          if (index == 5 && statusone == 0) { datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) { datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.push(34);}
+          if (index == 9 && statusone == 0) { datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) { datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.push(37);}
+          if (index == 13 && statusone == 0) { datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.push(7.5);}
+
+        }
+        else{
+          if (index == 0 && statusone == 0) {datasets.data.pop ();datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) {datasets.data.pop (); datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.pop ();datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.pop (); datasets.data.push(34);}
+          if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(37);}
+          if (index == 13 && statusone == 0) {datasets.data.pop (); datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+        }
+
+    });
+  statusone = 1;
+  statustwo = 0;
+  statusthree = 0;
+  statusfour = 0;
+  statusall = false;
+    ;
+      window.chart.update();
+    }
+  });
+
+  document.getElementById('addDatd2').addEventListener('click', function() {
+      if (chart.data.datasets.length > 0) {
+        // var month = MONTHS[config.data.labels.length % MONTHS.length];
+        if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+        chart.data.datasets.forEach(function(datasets,index) {
+
+          if (statusall == true){
+            if (index == 0 && statustwo == 0) {datasets.data.push(6.8);}
+            if (index == 1 && statustwo == 0 ) {datasets.data.push(34.5);}
+            if (index == 2 && statustwo == 0) {datasets.data.push(5.8);}
+            if (index == 3 && statustwo == 0 ) {datasets.data.push(25);}
+            if (index == 4 && statustwo == 0) {datasets.data.push(8);}
+            if (index == 5 && statustwo == 0 ) {datasets.data.push(18.5);}
+            if (index == 6 && statustwo == 0) {datasets.data.push(4);}
+            if (index == 7 && statustwo == 0 ) {datasets.data.push(7.5);}
+            if (index == 8 && statustwo == 0) {datasets.data.push(18.2);}
+            if (index == 9 && statustwo == 0 ) {datasets.data.push(8.8);}
+            if (index == 10 && statustwo == 0) {datasets.data.push(9);}
+            if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
+            if (index == 12 && statustwo == 0) {datasets.data.push(0);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
+
+          }
+          else{
+        if (index == 0 && statustwo == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+        if (index == 1 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34.5);}
+        if (index == 2 && statustwo == 0) {datasets.data.pop (); datasets.data.push(5.8);}
+        if (index == 3 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(25);}
+        if (index == 4 && statustwo == 0) {datasets.data.pop (); datasets.data.push(8);}
+        if (index == 5 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(18.5);}
+        if (index == 6 && statustwo == 0) {datasets.data.pop (); datasets.data.push(4);}
+        if (index == 7 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+        if (index == 8 && statustwo == 0) {datasets.data.pop (); datasets.data.push(18.2);}
+        if (index == 9 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(8.8);}
+        if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
+        if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
+        if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+      }
+      });
+        statustwo = 1;
+        statusone = 0;
+        statusthree = 0;
+        statusfour = 0;
+        statusall = false;
+      ;
+        window.chart.update();
+      }
+    });
+
+    document.getElementById('addDatd3').addEventListener('click', function() {
+        if (chart.data.datasets.length > 0) {
+          // var month = MONTHS[config.data.labels.length % MONTHS.length];
+          if (statusfour == 0 && statusthree == 0 && statusone == 0 && statustwo == 0) {chart.data.labels.push('2021');}
+          chart.data.datasets.forEach(function(datasets,index) {
+
+            if (statusall == true){
+              if (index == 0 && statusthree == 0) {datasets.data.push(6.5);}
+              if (index == 1 && statusthree == 0 ) {datasets.data.push(34.7);}
+              if (index == 2 && statusthree == 0) {datasets.data.push(6);}
+              if (index == 3 && statusthree == 0 ) {datasets.data.push(24);}
+              if (index == 4 && statusthree == 0) {datasets.data.push(8);}
+              if (index == 5 && statusthree == 0 ) {datasets.data.push(17.);}
+              if (index == 6 && statusthree == 0) {datasets.data.push(4);}
+              if (index == 7 && statusthree == 0 ) {datasets.data.push(7.5);}
+              if (index == 8 && statusthree == 0) {datasets.data.push(18.0);}
+              if (index == 9 && statusthree == 0 ) {datasets.data.push(9);}
+              if (index == 10 && statusthree == 0) {datasets.data.push(9);}
+              if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
+              if (index == 12 && statusthree == 0) {datasets.data.push(0);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
+
+            }
+            else{
+          if (index == 0 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6.5);}
+          if (index == 1 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.7);}
+          if (index == 2 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6);}
+          if (index == 3 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(24);}
+          if (index == 4 && statusthree == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(17.0);}
+          if (index == 6 && statusthree == 0) {datasets.data.pop (); datasets.data.push(4);}
+          if (index == 7 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+          if (index == 8 && statusthree == 0) {datasets.data.pop (); datasets.data.push(18.0);}
+          if (index == 9 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(9);}
+          if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
+          if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
+          if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+
+        }
+        });
+          statusthree = 1;
+          statusone = 0;
+          statustwo = 0;
+          statusfour = 0;
+          statusall = false;
+        ;
+          window.chart.update();
+        }
+      });
+
+      document.getElementById('addDatd4').addEventListener('click', function() {
+          if (chart.data.datasets.length > 0) {
+            // var month = MONTHS[config.data.labels.length % MONTHS.length];
+            if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
+            chart.data.datasets.forEach(function(datasets,index) {
+
+              if (statusall == true){
+                if (index == 0 && statusfour == 0) {datasets.data.push(7.4);}
+                if (index == 1 && statusfour == 0) { datasets.data.push(30);}
+                if (index == 2 && statusfour == 0) {datasets.data.push(6.8);}
+                if (index == 3 && statusfour == 0) { datasets.data.push(23);}
+                if (index == 4 && statusfour == 0) {datasets.data.push(8);}
+                if (index == 5 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 6 && statusfour == 0) {datasets.data.push(4.5);}
+                if (index == 7 && statusfour == 0) { datasets.data.push(8.3);}
+                if (index == 8 && statusfour == 0) {datasets.data.push(34);}
+                if (index == 9 && statusfour == 0) { datasets.data.push(19);}
+                if (index == 10 && statusfour == 0) {datasets.data.push(8.8);}
+                if (index == 11 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 12 && statusfour == 0) {datasets.data.push(37);}
+                if (index == 13 && statusfour == 0) { datasets.data.push(-1);}
+                if (index == 14 && statusfour == 0) {datasets.data.push(7.5);}
+
+              }
+              else{
+            if (index == 0 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.4);}
+            if (index == 1 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(30);}
+            if (index == 2 && statusfour == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+            if (index == 3 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(23);}
+            if (index == 4 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8);}
+            if (index == 5 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 6 && statusfour == 0) {datasets.data.pop (); datasets.data.push(4.5);}
+            if (index == 7 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(8.3);}
+            if (index == 8 && statusfour == 0) {datasets.data.pop (); datasets.data.push(34);}
+            if (index == 9 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(19);}
+            if (index == 10 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+            if (index == 11 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 12 && statusfour == 0) {datasets.data.pop (); datasets.data.push(37);}
+            if (index == 13 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(-1);}
+            if (index == 14 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+          }
+          });
+            statusfour = 1;
+            statusone = 0;
+            statustwo = 0;
+            statusthree = 0;
+            statusall = false;
+          ;
+            window.chart.update();
+          }
+        });
+//DATA5
+document.getElementById('addDate1').addEventListener('click', function() {
+
+    if (chart.data.datasets.length > 0) {
+      if (statusone == 0 && statustwo == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+      chart.data.datasets.forEach(function(datasets,index) {
+
+        if (statusall == true) {
+          if (index == 0 && statusone == 0) {datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) { datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) { datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.push(8);}
+          if (index == 5 && statusone == 0) { datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) { datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.push(34);}
+          if (index == 9 && statusone == 0) { datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) { datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.push(37);}
+          if (index == 13 && statusone == 0) { datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.push(7.5);}
+
+        }
+        else{
+          if (index == 0 && statusone == 0) {datasets.data.pop ();datasets.data.push(7.4);}
+          if (index == 1 && statusone == 0) {datasets.data.pop (); datasets.data.push(30);}
+          if (index == 2 && statusone == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+          if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(23);}
+          if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 6 && statusone == 0) {datasets.data.pop ();datasets.data.push(4.5);}
+          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.3);}
+          if (index == 8 && statusone == 0) {datasets.data.pop (); datasets.data.push(34);}
+          if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19);}
+          if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+          if (index == 11 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
+          if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(37);}
+          if (index == 13 && statusone == 0) {datasets.data.pop (); datasets.data.push(-1);}
+          if (index == 14 && statusone == 0) {datasets.data.pop (); datasets.data.push(7.5);}
+
+        }
+
+    });
+  statusone = 1;
+  statustwo = 0;
+  statusthree = 0;
+  statusfour = 0;
+  statusall = false;
+    ;
+      window.chart.update();
+    }
+  });
+
+  document.getElementById('addDate2').addEventListener('click', function() {
+      if (chart.data.datasets.length > 0) {
+        // var month = MONTHS[config.data.labels.length % MONTHS.length];
+        if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
+        chart.data.datasets.forEach(function(datasets,index) {
+
+          if (statusall == true){
+            if (index == 0 && statustwo == 0) {datasets.data.push(6.8);}
+            if (index == 1 && statustwo == 0 ) {datasets.data.push(34.5);}
+            if (index == 2 && statustwo == 0) {datasets.data.push(5.8);}
+            if (index == 3 && statustwo == 0 ) {datasets.data.push(25);}
+            if (index == 4 && statustwo == 0) {datasets.data.push(8);}
+            if (index == 5 && statustwo == 0 ) {datasets.data.push(18.5);}
+            if (index == 6 && statustwo == 0) {datasets.data.push(4);}
+            if (index == 7 && statustwo == 0 ) {datasets.data.push(7.5);}
+            if (index == 8 && statustwo == 0) {datasets.data.push(18.2);}
+            if (index == 9 && statustwo == 0 ) {datasets.data.push(8.8);}
+            if (index == 10 && statustwo == 0) {datasets.data.push(9);}
+            if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
+            if (index == 12 && statustwo == 0) {datasets.data.push(0);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
+
+          }
+          else{
+        if (index == 0 && statustwo == 0) {datasets.data.pop (); datasets.data.push(6.8);}
+        if (index == 1 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34.5);}
+        if (index == 2 && statustwo == 0) {datasets.data.pop (); datasets.data.push(5.8);}
+        if (index == 3 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(25);}
+        if (index == 4 && statustwo == 0) {datasets.data.pop (); datasets.data.push(8);}
+        if (index == 5 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(18.5);}
+        if (index == 6 && statustwo == 0) {datasets.data.pop (); datasets.data.push(4);}
+        if (index == 7 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+        if (index == 8 && statustwo == 0) {datasets.data.pop (); datasets.data.push(18.2);}
+        if (index == 9 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(8.8);}
+        if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
+        if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
+        if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+      }
+      });
+        statustwo = 1;
+        statusone = 0;
+        statusthree = 0;
+        statusfour = 0;
+        statusall = false;
+      ;
+        window.chart.update();
+      }
+    });
+
+    document.getElementById('addDate3').addEventListener('click', function() {
+        if (chart.data.datasets.length > 0) {
+          // var month = MONTHS[config.data.labels.length % MONTHS.length];
+          if (statusfour == 0 && statusthree == 0 && statusone == 0 && statustwo == 0) {chart.data.labels.push('2021');}
+          chart.data.datasets.forEach(function(datasets,index) {
+
+            if (statusall == true){
+              if (index == 0 && statusthree == 0) {datasets.data.push(6.5);}
+              if (index == 1 && statusthree == 0 ) {datasets.data.push(34.7);}
+              if (index == 2 && statusthree == 0) {datasets.data.push(6);}
+              if (index == 3 && statusthree == 0 ) {datasets.data.push(24);}
+              if (index == 4 && statusthree == 0) {datasets.data.push(8);}
+              if (index == 5 && statusthree == 0 ) {datasets.data.push(17.);}
+              if (index == 6 && statusthree == 0) {datasets.data.push(4);}
+              if (index == 7 && statusthree == 0 ) {datasets.data.push(7.5);}
+              if (index == 8 && statusthree == 0) {datasets.data.push(18.0);}
+              if (index == 9 && statusthree == 0 ) {datasets.data.push(9);}
+              if (index == 10 && statusthree == 0) {datasets.data.push(9);}
+              if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
+              if (index == 12 && statusthree == 0) {datasets.data.push(0);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
+
+            }
+            else{
+          if (index == 0 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6.5);}
+          if (index == 1 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.7);}
+          if (index == 2 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6);}
+          if (index == 3 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(24);}
+          if (index == 4 && statusthree == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 5 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(17.0);}
+          if (index == 6 && statusthree == 0) {datasets.data.pop (); datasets.data.push(4);}
+          if (index == 7 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
+          if (index == 8 && statusthree == 0) {datasets.data.pop (); datasets.data.push(18.0);}
+          if (index == 9 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(9);}
+          if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
+          if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
+          if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
+
+
+
+        }
+        });
+          statusthree = 1;
+          statusone = 0;
+          statustwo = 0;
+          statusfour = 0;
+          statusall = false;
+        ;
+          window.chart.update();
+        }
+      });
+
+      document.getElementById('addDate4').addEventListener('click', function() {
           if (chart.data.datasets.length > 0) {
             // var month = MONTHS[config.data.labels.length % MONTHS.length];
             if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
