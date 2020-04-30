@@ -78,18 +78,125 @@
 		<p class="DCinfo"> You can hide and show  environments by clicking on the legends. You can hover over the exact point to get specific details.</p>
 	</div>
 
-	<div id="myChart">
+<div id="myChart" >
+
 		<div class="YourQ">
-			<div class="question">What is the most environmental-friendly printing option at the office?</div>
-			<div class="moreinfo">  <span>?
+			<div class="moreinfo">  <span>?</span>
 				<div class="themoreinfo"> Learn about how your actions and ethics effect the environment by answer a question and seeing your impact </div>
-			</div>
-			<input type="button" class="choice" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
-			<input type="button" class="choice" id="addData2"
-			value="100% Recycled Paper" onclick="updatechart()">
-			<input type="button" class="choice" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
-			<input type="button" class="choice" id="addData4" value="TCF Paper" onclick="updatechart()">
 		</div>
+
+			<div class="question Q1">What is the most environmental-friendly printing option at an office?</div>
+			<div class="question Q2">Which choice is most sustainable for reusable plastic containers?</div>
+			<div class="question Q3"> What is the most sustainable practice for shipping a delivery overseas?</div>
+			<div class="question Q4">Which material has the least environmental impact for creating a pair of leather shoes?</div>
+			<div class="question Q5">What is best material for a eco-friendly reusable tote bag?</div>
+
+
+			<div class="ran">
+			<input type="button" class="choice A1" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
+			<input type="button" class="choice A2" id="addData2"
+			value="100% Recycled Paper" onclick="updatechart()">
+			<input type="button" class="choice A3" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
+			<input type="button" class="choice A4" id="addData4" value="TCF Paper" onclick="updatechart()">
+		</div>
+		<div class="ran">
+			<input type="button" class="choice A1" id="addDatb1" value="Ocean Bound" onclick="updatechart()">
+			<input type="button" class="choice A2" id="addDatb2"
+			value="Biodegradable" onclick="updatechart()">
+			<input type="button" class="choice A3" id="addDatb3" value="Eco/recycled" onclick="updatechart()">
+			<input type="button" class="choice A4" id="addDatb4" value="Bioplastic" onclick="updatechart()">
+		</div>
+		<div class="ran">
+			<input type="button" class="choice A1" id="addDatc1" value="Biodegradable packaging peanut" onclick="updatechart()">
+			<input type="button" class="choice A2" id="addDatc2"
+			value="Air Pillows Made of Recycled Material" onclick="updatechart()">
+			<input type="button" class="choice A3" id="addDatc3" value="Cornstarch Packaging" onclick="updatechart()">
+			<input type="button" class="choice A4" id="addDatc4" value="Recycled Cardboard" onclick="updatechart()">
+		</div>
+		<div class="ran">
+			<input type="button" class="choice A1" id="addDatd1" value="Leather" onclick="updatechart()">
+			<input type="button" class="choice A2" id="addDatd2"
+			value="Vegetable Tanned Leather" onclick="updatechart()">
+			<input type="button" class="choice A3" id="addDatd3" value="Pleather" onclick="updatechart()">
+			<input type="button" class="choice A4" id="addDatd4" value="Pinatex" onclick="updatechart()">
+		</div>
+		<div class="ran">
+			<input type="button" class="choice A1" id="addDate1" value="Organic Cotton" onclick="updatechart()">
+			<input type="button" class="choice A2" id="addDate2"
+			value="Recycled Cotton" onclick="updatechart()">
+			<input type="button" class="choice A3" id="addDate3" value="Organic Hemp" onclick="updatechart()">
+			<input type="button" class="choice A4" id="addDate4" value="Organic Linen" onclick="updatechart()">
+		</div>
+		</div>
+<!--
+<div id="myChart" class="ran">
+				<div class="YourQ">
+					<div class="question Q2">Which choice is most sustainable for reusable plastic containers?</div>
+
+					<div class="moreinfo">  <span>?
+						<div class="themoreinfo"> Learn about how your actions and ethics effect the environment by answer a question and seeing your impact </div>
+					</div>
+
+					<input type="button" class="choice Q2" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
+					<input type="button" class="choice Q2" id="addData2"
+					value="100% Recycled Paper" onclick="updatechart()">
+					<input type="button" class="choice Q2" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
+					<input type="button" class="choice Q2" id="addData4" value="TCF Paper" onclick="updatechart()">
+
+				</div>
+
+<div id="myChart" class="ran">
+				<div class="YourQ">
+					<div class="question Q3"> What is the most sustainable practice for shipping a delivery overseas?</div>
+
+					<div class="moreinfo">  <span>?
+						<div class="themoreinfo"> Learn about how your actions and ethics effect the environment by answer a question and seeing your impact </div>
+					</div>
+
+					<input type="button" class="choice Q3" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
+					<input type="button" class="choice Q3" id="addData2"
+					value="100% Recycled Paper" onclick="updatechart()">
+					<input type="button" class="choice Q3" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
+					<input type="button" class="choice Q3" id="addData4" value="TCF Paper" onclick="updatechart()">
+
+				</div>
+
+<div id="myChart" class="ran">
+					<div class="YourQ">
+						<div class="question Q4">Which material has the least environmental impact for creating a pair of leather shoes?</div>
+						<div class="question Q5">What is best material for a eco-friendly reusable tote bag?</div>
+						<div class="moreinfo">  <span>?
+							<div class="themoreinfo"> Learn about how your actions and ethics effect the environment by answer a question and seeing your impact </div>
+						</div>
+
+						<input type="button" class="choice Q4" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
+						<input type="button" class="choice Q4" id="addData2"
+						value="100% Recycled Paper" onclick="updatechart()">
+						<input type="button" class="choice Q4" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
+						<input type="button" class="choice Q4" id="addData4" value="TCF Paper" onclick="updatechart()">
+
+						<input type="button" class="choice Q5" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
+						<input type="button" class="choice Q5" id="addData2"
+						value="100% Recycled Paper" onclick="updatechart()">
+						<input type="button" class="choice Q5" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
+						<input type="button" class="choice Q5" id="addData4" value="TCF Paper" onclick="updatechart()">
+					</div>
+
+					<div id="myChart" class="ran">
+										<div class="YourQ">
+											<div class="question Q5">What is best material for a eco-friendly reusable tote bag?</div>
+											<div class="moreinfo">  <span>?
+												<div class="themoreinfo"> Learn about how your actions and ethics effect the environment by answer a question and seeing your impact </div>
+											</div>
+											<input type="button" class="choice Q5" id="addData1" value="50% Recycled Paper" onclick="updatechart()">
+											<input type="button" class="choice Q5" id="addData2"
+											value="100% Recycled Paper" onclick="updatechart()">
+											<input type="button" class="choice Q5" id="addData3" value="FSC Certified Paper" onclick="updatechart()">
+											<input type="button" class="choice Q5" id="addData4" value="TCF Paper" onclick="updatechart()">
+										</div> -->
+
+
+
 
   <canvas class="radarg" id="radar-chart" ></canvas>
   <div id="chartjs-legend" class="noselect"></div>

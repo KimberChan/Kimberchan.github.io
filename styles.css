@@ -31,7 +31,7 @@ p{
     color: white;
 }
 .p3 {
-    height: 1050px;
+    height: 1150px;
     width: 100%;
     /* margin-left: 5%; */
     /* margin-to
@@ -98,8 +98,8 @@ svg{
 } */
 div.infobox{
   position:fixed;
-  bottom:20px;
-  right:10px;
+  bottom:40px;
+  right:40px;
   font-size: 16pt;
   /* background:white; */
   height: 100px;
@@ -265,10 +265,13 @@ margin-bottom: 35px;
 padding-right: 60px;
 }
 .dot{
+  /* position: absolute; */
+  display: block;
+  margin-left: 57%;
   height: 15px;
   width: 15px;
   border-radius: 100%;
-  margin: 0px;
+
   margin-bottom: 10px;
 
 
@@ -289,15 +292,16 @@ padding-right: 60px;
 } */
 
 dl{
-  position: absolute;
+  /* position: absolute; */
   margin-top:-132px;
   line-height:19pt;
-  margin-left:5%;
+  float: right;
+  margin-right:15%;
   /* padding:5px; */
 }
 
 .networkdata{
-  padding-top: 10px;
+  padding-top: 150px;
   /* background-color: red; */
 }
 
@@ -333,7 +337,7 @@ padding-right: 60px;
 } */
 
 .choice{
-  display: block;
+  display:inline;
     padding: 7px 20px;
 	border-radius: 25px;
     text-decoration: none;
@@ -357,8 +361,17 @@ padding-right: 60px;
 .question{
   margin-bottom: 20px;
   width: 250px;
-    display: inline-block;
+    display: none;
 }
+
+/* #myChart{
+  display:none;
+} */
+/* .Q1{display: inline-block;}
+.Q2{display: inline-block;}
+.Q3{display: inline-block;}
+.Q4{display: inline-block;}
+.Q5{display: inline-block;} */
 
 .moreinfo{
   display: inline-block;
@@ -389,7 +402,9 @@ padding-right: 60px;
  display: inline-block;
 }
 
-
+.ran{
+  display: none;
+}
 /* .radar-legend{
   color:red;
 } */
