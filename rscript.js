@@ -175,11 +175,10 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [4.81,5.07,5.26,5.61,5.8,5.98,6.19,6.52,6.48,6.73,6.66,6.68,6.68,6.8,6.86,6.93,7.01,7.01,7.09,7.19,7,7.2],
           pointStyle: 'line',
           hidden: false,
-          notes: ["x10^5 km2 Deforestation","x10^5 km2 Deforestation","x10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation","10^5 km2 Deforestation",]
+          notes: ["(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)","(10^5 sq.km)",]
         },
         {
           label: "AR2",
-          name: "Forest Coverage",
           place: "Amazon Rainforest",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
@@ -190,7 +189,9 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [36.2,36.0,35.9,35.7,35.4,35.7,35.4,35.2,35.0,34.8,34.5,34.5,34.3,34.3,34.3,34.3,34.3,34.2,34.1,33.9,33.8,33.8],
           pointStyle: 'line',
           hidden: false,
-          notes: ["(10^6 sq.km)","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover","x10^6 km2 Forest Cover",]
+          notes: ["(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)",],
+          name: "Forest Coverage"
+          // name: ["Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage","Forest Coverage",]
         },
         {
           label: "AR3",
@@ -205,11 +206,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [4.1,4.2,4.3,4.4,4.5,4.6,4.7,4.8,4.9,5.0,5.1,5.2,5.3,5.4,5.5,5.6,5.7,5.8,5.9,6.0,6.1,6.2],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)","(10^4 fires)"]
         },
         {
           label: "Great Barrier Reef",
-          name: "NAME",
+          name: "Sea Surface Temperature",
           fill: true,
           backgroundColor: "rgba(179,181,198,0)",
           borderColor: "#36A8B0",
@@ -218,11 +219,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [25.29,23.97,23.86,24.30,25.05,24.80,25.05,24.8,25.45,24.85,24.85,24.7,24.98,25.7,24.5,24.9,25.1,24.9,25.25,26.00,26.86,24.43],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C"]
         },
         {
           label: "Acidity Change of GBR",
-          name: "NAME",
+          name: "Acidity of Sea Surface",
           fill: true,
           backgroundColor: "rgba(179,181,198,0)",
           borderColor: "#36A8B0",
@@ -231,11 +232,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [8.092,8.091,8.089,8.087,8.085,8.084,8.081,8.079,8.077,8.075,8.074,8.07,8.069,8.067,8.065,8.063,8.061,8.060,8.058,8.056,8.055,8.055],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH","pH"]
         },
         {
           label: "Coral Growth of GBR",
-          name: "NAME",
+          name: "Coral Coverage",
           fill: true,
           backgroundColor: "rgba(179,181,198,0)",
           borderColor: "#36A8B0",
@@ -244,11 +245,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [23.8,22,20,21,17,16,19,17,17,17,16.8,15.8,12,11,15,16,16,24,22,16,16,16],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["%","%","%","%","%","%","%","%","%","%","%","%","%","%","%","%","%","%","%","%","%","%",]
         }  ,
         {
           label: "Mauna Loa Volcano",
-          name: "NAME",
+          name: "Atmospheric CO2",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#E15026",
@@ -258,11 +259,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [3.68,3.69,3.71,3.73,3.75,3.77,3.78,3.81,3.83,3.85,3.87,3.88,3.91,3.93,3.95,3.97,3.99,4.02,4.06,4.07,4.11,4.13],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)","(10^2 ppm)"]
         },
         {
           label: "MLV2",
-          name: "NAME",
+          name: "Average Temperature",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#E15026",
@@ -272,11 +273,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [6.7,6.8,7.0,7.4,8.0,7.2,7.5,7.4,6.9,7.4,8.5,7.2,7.6,7.5,7.9,8.3,7.8,7.8,7.8,7.8,7.9,7.9],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C"]
         },
         {
           label: "MVL3",
-          name: "NAME",
+          name: "Surface Ozone",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#E15026",
@@ -286,11 +287,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [43,40,37.5,38,44,40,40,41,40.5,39,38,45,41.5,42,41,40.5,40,41,42,38,39.5,38],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)","(nmol mol^-1)"]
         },
         {
           label: "Mount Everest",
-          name: "NAME",
+          name: "Average Temperature",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#56769D",
@@ -300,11 +301,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [17.7, 17.7,18.0,17.7,17.7,17.8,17.9,18.5,18.0,18.0,18.4,18.7,17.8,18.3,18.0,18.1,18.4,18.8,18.5,18.5,18.6,18.6],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C", "°C"]
         },
         {
           label: "ME2",
-          name: "NAME",
+          name: "Total Number of Supraglacial Ponds",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#56769D",
@@ -314,11 +315,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [3.3,3.4,4.1,4.6,4.4,4.0,4.0,4.1,4.4,4.8,5.2,5.7,5.5,5.4,5.7,7.2,8.8,8.9,8.5,8.2,8.6,9.2],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)","(10^1 No. of Ponds)"]
         },
         {
           label: "ME3",
-          name: "NAME",
+          name: "Total Number of Deaths",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#56769D",
@@ -328,11 +329,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [4,2,5,3,4,7,6,11,7,1,5,3,4,10,8,17,14,5,6,5,11,15],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths","Deaths"]
         },
         {
           label: "Sahara Desert",
-          name: "NAME",
+          name: "Average Temp",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#FCC842",
@@ -342,11 +343,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [6,14,6,24,14,22,18,12,10,10,10,20,20,23,25,27,28,27,27,29,34,37],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)", "(10^(-1)°C)"]
         },
         {
           label: "SD2",
-          name: "NAME",
+          name: "Precipitation Anomalies",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#FCC842",
@@ -356,11 +357,11 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [1.85,-.6,-.8,-1.8,1.1,-1.5,-.5,-.7,-1.3,.5,.1,1.2,-1.4,1.4,-.3,-.4,1.95,1.1,-.1,-1.2,-1.4,.1],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month","cm/month"]
         },
         {
           label: "SD3",
-          name: "NAME",
+          name: "Precipitation Anomalies",
           fill: true,
           backgroundColor: "rgba(255,99,132,0)",
           borderColor: "#FCC842",
@@ -370,7 +371,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
           data: [7.0,8.2,8.3,7.7,6.7,7.7,6.9,6.6,7.6,7.7,7.4,6.7,7.8,7.1,7.6,7.4,7.3,7.3,7.3,7.3,7.3,7.3],
           pointStyle: 'line',
           hidden: false,
-          notes: ["I am pretty happy","I am isolated","none","none","none","none","none","none"]
+          notes: ["(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)","(10^6 sq.km)"]
         }
       ]
     },
@@ -387,7 +388,7 @@ var chart = new Chart(document.getElementById("radar-chart"), {
         //Datapoint+Notes
         callbacks:{
           title: function(tooltipItem, data){
-         var titlename = chart.data.datasets[tooltipItem[0].index].name;
+         var titlename = chart.data.datasets[tooltipItem[0].datasetIndex].name;
          var titleyear = chart.data.labels[tooltipItem[0].index];
          return titlename + " || " + titleyear ;},
          // footer: function (tooltipItem, data){
@@ -522,7 +523,7 @@ document.getElementById('addData1').addEventListener('click', function() {
             if (index == 10 && statustwo == 0) {datasets.data.push(9);}
             if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
             if (index == 12 && statustwo == 0) {datasets.data.push(0);}
-            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(.5);}
             if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
 
           }
@@ -540,7 +541,7 @@ document.getElementById('addData1').addEventListener('click', function() {
         if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
         if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
         if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
-        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(.5);}
         if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -576,7 +577,7 @@ document.getElementById('addData1').addEventListener('click', function() {
               if (index == 10 && statusthree == 0) {datasets.data.push(9);}
               if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
               if (index == 12 && statusthree == 0) {datasets.data.push(0);}
-              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(.6);}
               if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
 
             }
@@ -594,7 +595,7 @@ document.getElementById('addData1').addEventListener('click', function() {
           if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
           if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
           if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
-          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(.6);}
           if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -664,7 +665,7 @@ document.getElementById('addData1').addEventListener('click', function() {
           }
         });
 //DATA@
-document.getElementById('addDatb1').addEventListener('click', function() {
+document.getElementById('addDatb3').addEventListener('click', function() {
 
     if (chart.data.datasets.length > 0) {
       if (statusone == 0 && statustwo == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
@@ -674,14 +675,14 @@ document.getElementById('addDatb1').addEventListener('click', function() {
           if (index == 0 && statusone == 0) {datasets.data.push(7.4);}
           if (index == 1 && statusone == 0) { datasets.data.push(30);}
           if (index == 2 && statusone == 0) {datasets.data.push(6.8);}
-          if (index == 3 && statusone == 0) { datasets.data.push(23);}
+          if (index == 3 && statusone == 0) { datasets.data.push(25);}
           if (index == 4 && statusone == 0) {datasets.data.push(8);}
           if (index == 5 && statusone == 0) { datasets.data.push(12);}
           if (index == 6 && statusone == 0) {datasets.data.push(4.5);}
-          if (index == 7 && statusone == 0) { datasets.data.push(8.3);}
+          if (index == 7 && statusone == 0) { datasets.data.push(8.0);}
           if (index == 8 && statusone == 0) {datasets.data.push(34);}
           if (index == 9 && statusone == 0) { datasets.data.push(19);}
-          if (index == 10 && statusone == 0) {datasets.data.push(8.8);}
+          if (index == 10 && statusone == 0) {datasets.data.push(9);}
           if (index == 11 && statusone == 0) { datasets.data.push(12);}
           if (index == 12 && statusone == 0) {datasets.data.push(37);}
           if (index == 13 && statusone == 0) { datasets.data.push(-1);}
@@ -692,14 +693,14 @@ document.getElementById('addDatb1').addEventListener('click', function() {
           if (index == 0 && statusone == 0) {datasets.data.pop ();datasets.data.push(7.4);}
           if (index == 1 && statusone == 0) {datasets.data.pop (); datasets.data.push(30);}
           if (index == 2 && statusone == 0) {datasets.data.pop (); datasets.data.push(6.8);}
-          if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(23);}
+          if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(25);}
           if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
           if (index == 5 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
           if (index == 6 && statusone == 0) {datasets.data.pop ();datasets.data.push(4.5);}
-          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.3);}
+          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.0);}
           if (index == 8 && statusone == 0) {datasets.data.pop (); datasets.data.push(34);}
           if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19);}
-          if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.8);}
+          if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(9);}
           if (index == 11 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
           if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(37);}
           if (index == 13 && statusone == 0) {datasets.data.pop (); datasets.data.push(-1);}
@@ -738,7 +739,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
             if (index == 10 && statustwo == 0) {datasets.data.push(9);}
             if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
             if (index == 12 && statustwo == 0) {datasets.data.push(0);}
-            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(.5);}
             if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
 
           }
@@ -756,7 +757,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
         if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
         if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
         if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
-        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(.5);}
         if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -772,7 +773,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
       }
     });
 
-    document.getElementById('addDatb3').addEventListener('click', function() {
+    document.getElementById('addDatb4').addEventListener('click', function() {
         if (chart.data.datasets.length > 0) {
           // var month = MONTHS[config.data.labels.length % MONTHS.length];
           if (statusfour == 0 && statusthree == 0 && statusone == 0 && statustwo == 0) {chart.data.labels.push('2021');}
@@ -792,7 +793,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
               if (index == 10 && statusthree == 0) {datasets.data.push(9);}
               if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
               if (index == 12 && statusthree == 0) {datasets.data.push(0);}
-              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(.6);}
               if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
 
             }
@@ -810,7 +811,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
           if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
           if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
           if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
-          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(.6);}
           if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -827,7 +828,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
         }
       });
 
-      document.getElementById('addDatb4').addEventListener('click', function() {
+      document.getElementById('addDatb1').addEventListener('click', function() {
           if (chart.data.datasets.length > 0) {
             // var month = MONTHS[config.data.labels.length % MONTHS.length];
             if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
@@ -934,7 +935,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
             }
           });
 
-          document.getElementById('addDatc2').addEventListener('click', function() {
+          document.getElementById('addDatc4').addEventListener('click', function() {
               if (chart.data.datasets.length > 0) {
                 // var month = MONTHS[config.data.labels.length % MONTHS.length];
                 if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
@@ -954,7 +955,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
                     if (index == 10 && statustwo == 0) {datasets.data.push(9);}
                     if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
                     if (index == 12 && statustwo == 0) {datasets.data.push(0);}
-                    if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+                    if (index == 13 && statustwo == 0 ) {datasets.data.push(.5);}
                     if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
 
                   }
@@ -972,7 +973,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
                 if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
                 if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
                 if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
-                if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+                if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(.5);}
                 if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -1008,7 +1009,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
                       if (index == 10 && statusthree == 0) {datasets.data.push(9);}
                       if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
                       if (index == 12 && statusthree == 0) {datasets.data.push(0);}
-                      if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+                      if (index == 13 && statusthree == 0 ) {datasets.data.push(.6);}
                       if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
 
                     }
@@ -1043,7 +1044,7 @@ document.getElementById('addDatb1').addEventListener('click', function() {
                 }
               });
 
-              document.getElementById('addDatc4').addEventListener('click', function() {
+              document.getElementById('addDatc2').addEventListener('click', function() {
                   if (chart.data.datasets.length > 0) {
                     // var month = MONTHS[config.data.labels.length % MONTHS.length];
                     if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
@@ -1151,7 +1152,7 @@ document.getElementById('addDatd1').addEventListener('click', function() {
     }
   });
 
-  document.getElementById('addDatd2').addEventListener('click', function() {
+  document.getElementById('addDatd3').addEventListener('click', function() {
       if (chart.data.datasets.length > 0) {
         // var month = MONTHS[config.data.labels.length % MONTHS.length];
         if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
@@ -1171,7 +1172,7 @@ document.getElementById('addDatd1').addEventListener('click', function() {
             if (index == 10 && statustwo == 0) {datasets.data.push(9);}
             if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
             if (index == 12 && statustwo == 0) {datasets.data.push(0);}
-            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(.5);}
             if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
 
           }
@@ -1189,7 +1190,7 @@ document.getElementById('addDatd1').addEventListener('click', function() {
         if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
         if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
         if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
-        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(.5);}
         if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -1205,45 +1206,45 @@ document.getElementById('addDatd1').addEventListener('click', function() {
       }
     });
 
-    document.getElementById('addDatd3').addEventListener('click', function() {
+    document.getElementById('addDatd4').addEventListener('click', function() {
         if (chart.data.datasets.length > 0) {
           // var month = MONTHS[config.data.labels.length % MONTHS.length];
           if (statusfour == 0 && statusthree == 0 && statusone == 0 && statustwo == 0) {chart.data.labels.push('2021');}
           chart.data.datasets.forEach(function(datasets,index) {
 
             if (statusall == true){
-              if (index == 0 && statusthree == 0) {datasets.data.push(6.5);}
-              if (index == 1 && statusthree == 0 ) {datasets.data.push(34.7);}
+              if (index == 0 && statusthree == 0) {datasets.data.push(6.7);}
+              if (index == 1 && statusthree == 0 ) {datasets.data.push(35);}
               if (index == 2 && statusthree == 0) {datasets.data.push(6);}
               if (index == 3 && statusthree == 0 ) {datasets.data.push(24);}
               if (index == 4 && statusthree == 0) {datasets.data.push(8);}
-              if (index == 5 && statusthree == 0 ) {datasets.data.push(17.);}
-              if (index == 6 && statusthree == 0) {datasets.data.push(4);}
+              if (index == 5 && statusthree == 0 ) {datasets.data.push(19.);}
+              if (index == 6 && statusthree == 0) {datasets.data.push(4.4);}
               if (index == 7 && statusthree == 0 ) {datasets.data.push(7.5);}
               if (index == 8 && statusthree == 0) {datasets.data.push(18.0);}
               if (index == 9 && statusthree == 0 ) {datasets.data.push(9);}
-              if (index == 10 && statusthree == 0) {datasets.data.push(9);}
+              if (index == 10 && statusthree == 0) {datasets.data.push(9.4);}
               if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
               if (index == 12 && statusthree == 0) {datasets.data.push(0);}
-              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(.6);}
               if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
 
             }
             else{
-          if (index == 0 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6.5);}
-          if (index == 1 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.7);}
+          if (index == 0 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6.7);}
+          if (index == 1 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(35);}
           if (index == 2 && statusthree == 0) {datasets.data.pop (); datasets.data.push(6);}
           if (index == 3 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(24);}
           if (index == 4 && statusthree == 0) {datasets.data.pop (); datasets.data.push(8);}
-          if (index == 5 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(17.0);}
-          if (index == 6 && statusthree == 0) {datasets.data.pop (); datasets.data.push(4);}
+          if (index == 5 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(19.0);}
+          if (index == 6 && statusthree == 0) {datasets.data.pop (); datasets.data.push(4.4);}
           if (index == 7 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(7.5);}
           if (index == 8 && statusthree == 0) {datasets.data.pop (); datasets.data.push(18.0);}
           if (index == 9 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(9);}
-          if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
+          if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9.4);}
           if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
           if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
-          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(.6);}
           if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -1260,7 +1261,7 @@ document.getElementById('addDatd1').addEventListener('click', function() {
         }
       });
 
-      document.getElementById('addDatd4').addEventListener('click', function() {
+      document.getElementById('addDatd2').addEventListener('click', function() {
           if (chart.data.datasets.length > 0) {
             // var month = MONTHS[config.data.labels.length % MONTHS.length];
             if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
@@ -1268,17 +1269,17 @@ document.getElementById('addDatd1').addEventListener('click', function() {
 
               if (statusall == true){
                 if (index == 0 && statusfour == 0) {datasets.data.push(7.4);}
-                if (index == 1 && statusfour == 0) { datasets.data.push(30);}
+                if (index == 1 && statusfour == 0) { datasets.data.push(31);}
                 if (index == 2 && statusfour == 0) {datasets.data.push(6.8);}
                 if (index == 3 && statusfour == 0) { datasets.data.push(23);}
                 if (index == 4 && statusfour == 0) {datasets.data.push(8);}
-                if (index == 5 && statusfour == 0) { datasets.data.push(12);}
-                if (index == 6 && statusfour == 0) {datasets.data.push(4.5);}
+                if (index == 5 && statusfour == 0) { datasets.data.push(13);}
+                if (index == 6 && statusfour == 0) {datasets.data.push(4.6);}
                 if (index == 7 && statusfour == 0) { datasets.data.push(8.3);}
                 if (index == 8 && statusfour == 0) {datasets.data.push(34);}
                 if (index == 9 && statusfour == 0) { datasets.data.push(19);}
                 if (index == 10 && statusfour == 0) {datasets.data.push(8.8);}
-                if (index == 11 && statusfour == 0) { datasets.data.push(12);}
+                if (index == 11 && statusfour == 0) { datasets.data.push(11);}
                 if (index == 12 && statusfour == 0) {datasets.data.push(37);}
                 if (index == 13 && statusfour == 0) { datasets.data.push(-1);}
                 if (index == 14 && statusfour == 0) {datasets.data.push(7.5);}
@@ -1286,17 +1287,17 @@ document.getElementById('addDatd1').addEventListener('click', function() {
               }
               else{
             if (index == 0 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.4);}
-            if (index == 1 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(30);}
+            if (index == 1 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(31);}
             if (index == 2 && statusfour == 0) {datasets.data.pop (); datasets.data.push(6.8);}
             if (index == 3 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(23);}
             if (index == 4 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8);}
-            if (index == 5 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
-            if (index == 6 && statusfour == 0) {datasets.data.pop (); datasets.data.push(4.5);}
+            if (index == 5 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(13);}
+            if (index == 6 && statusfour == 0) {datasets.data.pop (); datasets.data.push(4.6);}
             if (index == 7 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(8.3);}
             if (index == 8 && statusfour == 0) {datasets.data.pop (); datasets.data.push(34);}
             if (index == 9 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(19);}
             if (index == 10 && statusfour == 0) {datasets.data.pop (); datasets.data.push(8.8);}
-            if (index == 11 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(12);}
+            if (index == 11 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(11);}
             if (index == 12 && statusfour == 0) {datasets.data.pop (); datasets.data.push(37);}
             if (index == 13 && statusfour == 0 ) {datasets.data.pop ();datasets.data.push(-1);}
             if (index == 14 && statusfour == 0) {datasets.data.pop (); datasets.data.push(7.5);}
@@ -1313,7 +1314,7 @@ document.getElementById('addDatd1').addEventListener('click', function() {
           }
         });
 //DATA5
-document.getElementById('addDate1').addEventListener('click', function() {
+document.getElementById('addDate2').addEventListener('click', function() {
 
     if (chart.data.datasets.length > 0) {
       if (statusone == 0 && statustwo == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
@@ -1324,15 +1325,15 @@ document.getElementById('addDate1').addEventListener('click', function() {
           if (index == 1 && statusone == 0) { datasets.data.push(30);}
           if (index == 2 && statusone == 0) {datasets.data.push(6.8);}
           if (index == 3 && statusone == 0) { datasets.data.push(23);}
-          if (index == 4 && statusone == 0) {datasets.data.push(8);}
+          if (index == 4 && statusone == 0) {datasets.data.push(8.2);}
           if (index == 5 && statusone == 0) { datasets.data.push(12);}
           if (index == 6 && statusone == 0) {datasets.data.push(4.5);}
-          if (index == 7 && statusone == 0) { datasets.data.push(8.3);}
+          if (index == 7 && statusone == 0) { datasets.data.push(8);}
           if (index == 8 && statusone == 0) {datasets.data.push(34);}
-          if (index == 9 && statusone == 0) { datasets.data.push(19);}
+          if (index == 9 && statusone == 0) { datasets.data.push(19.5);}
           if (index == 10 && statusone == 0) {datasets.data.push(8.8);}
           if (index == 11 && statusone == 0) { datasets.data.push(12);}
-          if (index == 12 && statusone == 0) {datasets.data.push(37);}
+          if (index == 12 && statusone == 0) {datasets.data.push(35);}
           if (index == 13 && statusone == 0) { datasets.data.push(-1);}
           if (index == 14 && statusone == 0) {datasets.data.push(7.5);}
 
@@ -1342,15 +1343,15 @@ document.getElementById('addDate1').addEventListener('click', function() {
           if (index == 1 && statusone == 0) {datasets.data.pop (); datasets.data.push(30);}
           if (index == 2 && statusone == 0) {datasets.data.pop (); datasets.data.push(6.8);}
           if (index == 3 && statusone == 0) {datasets.data.pop ();datasets.data.push(23);}
-          if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
+          if (index == 4 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.2);}
           if (index == 5 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
           if (index == 6 && statusone == 0) {datasets.data.pop ();datasets.data.push(4.5);}
-          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.3);}
+          if (index == 7 && statusone == 0) {datasets.data.pop (); datasets.data.push(8);}
           if (index == 8 && statusone == 0) {datasets.data.pop (); datasets.data.push(34);}
-          if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19);}
+          if (index == 9 && statusone == 0) {datasets.data.pop ();datasets.data.push(19.5);}
           if (index == 10 && statusone == 0) {datasets.data.pop (); datasets.data.push(8.8);}
           if (index == 11 && statusone == 0) {datasets.data.pop (); datasets.data.push(12);}
-          if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(37);}
+          if (index == 12 && statusone == 0) {datasets.data.pop ();datasets.data.push(35);}
           if (index == 13 && statusone == 0) {datasets.data.pop (); datasets.data.push(-1);}
           if (index == 14 && statusone == 0) {datasets.data.pop (); datasets.data.push(7.5);}
 
@@ -1367,7 +1368,7 @@ document.getElementById('addDate1').addEventListener('click', function() {
     }
   });
 
-  document.getElementById('addDate2').addEventListener('click', function() {
+  document.getElementById('addDate4').addEventListener('click', function() {
       if (chart.data.datasets.length > 0) {
         // var month = MONTHS[config.data.labels.length % MONTHS.length];
         if (statustwo == 0 && statusone == 0 && statusthree == 0 && statusfour == 0) {chart.data.labels.push('2021');}
@@ -1387,7 +1388,7 @@ document.getElementById('addDate1').addEventListener('click', function() {
             if (index == 10 && statustwo == 0) {datasets.data.push(9);}
             if (index == 11 && statustwo == 0 ) {datasets.data.push(34);}
             if (index == 12 && statustwo == 0) {datasets.data.push(0);}
-            if (index == 13 && statustwo == 0 ) {datasets.data.push(60);}
+            if (index == 13 && statustwo == 0 ) {datasets.data.push(.5);}
             if (index == 14 && statustwo == 0) {datasets.data.push(7.2);}
 
           }
@@ -1405,7 +1406,7 @@ document.getElementById('addDate1').addEventListener('click', function() {
         if (index == 10 && statustwo == 0) {datasets.data.pop (); datasets.data.push(9);}
         if (index == 11 && statustwo == 0 ) {datasets.data.pop ();datasets.data.push(34);}
         if (index == 12 && statustwo == 0) {datasets.data.pop (); datasets.data.push(0);}
-        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(60);}
+        if (index == 13&& statustwo == 0 ) {datasets.data.pop ();datasets.data.push(.5);}
         if (index == 14 && statustwo == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -1441,7 +1442,7 @@ document.getElementById('addDate1').addEventListener('click', function() {
               if (index == 10 && statusthree == 0) {datasets.data.push(9);}
               if (index == 11 && statusthree == 0 ) {datasets.data.push(34.2);}
               if (index == 12 && statusthree == 0) {datasets.data.push(0);}
-              if (index == 13 && statusthree == 0 ) {datasets.data.push(62);}
+              if (index == 13 && statusthree == 0 ) {datasets.data.push(.62);}
               if (index == 14 && statusthree == 0) {datasets.data.push(7.2);}
 
             }
@@ -1459,7 +1460,7 @@ document.getElementById('addDate1').addEventListener('click', function() {
           if (index == 10 && statusthree == 0) {datasets.data.pop (); datasets.data.push(9);}
           if (index == 11 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(34.2);}
           if (index == 12 && statusthree == 0) {datasets.data.pop (); datasets.data.push(0);}
-          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(62);}
+          if (index == 13 && statusthree == 0 ) {datasets.data.pop ();datasets.data.push(.62);}
           if (index == 14 && statusthree == 0) {datasets.data.pop (); datasets.data.push(7.2);}
 
 
@@ -1476,7 +1477,7 @@ document.getElementById('addDate1').addEventListener('click', function() {
         }
       });
 
-      document.getElementById('addDate4').addEventListener('click', function() {
+      document.getElementById('addDate1').addEventListener('click', function() {
           if (chart.data.datasets.length > 0) {
             // var month = MONTHS[config.data.labels.length % MONTHS.length];
             if (statusfour == 0 && statusone == 0 && statustwo == 0 && statusthree == 0) {chart.data.labels.push('2021');}
